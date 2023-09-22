@@ -1,0 +1,21 @@
+#navbarbluestar{
+    background-color: linear-gradient(90deg, #4698D4 1.27%, rgba(125, 209, 248, 0.27) 126.64%);
+    background: linear-gradient(180deg, #4698D4, rgba(125, 209, 248, 0.27));
+    background-size: 180% 180%;
+    animation: gradient-animation 18s ease infinite;
+}
+
+.navbar-brand{
+    color: whitesmoke;
+}
+#btn-login{
+    background-color: #0F5A90;
+    color: aliceblue;
+}
+#btn-signup{
+    background-color: whitesmoke;
+    color: #0F5A90;
+}
+#nav-link{
+    color: aliceblue;
+}
