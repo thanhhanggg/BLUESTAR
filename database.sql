@@ -547,7 +547,137 @@ END;
 
 
 ----------
+CREATE TABLE CUSTOMER
+(
+	C_ID VARCHAR(3) NOT NULL,
+	NUM_ID VARCHAR(20),
+	FULLNAME VARCHAR(100),
+	POINT INT,
+	MAIL VARCHAR(30),
+	CONSTRAINT pk_customer PRIMARY KEY (C_ID)
+);
 
+INSERT INTO CUSTOMER(C_ID, NUM_ID, FULLNAME, POINT, MAIL)
+VALUES
+    ('C01', '1234567890', N'Nguyễn Văn Hải', 5, 'nguyenvanhai@email.com'),
+    ('C02', '2345678901', N'Trần Thị Linh', 7, 'tranthinguyen@email.com'),
+    ('C03', '3456789012', N'Lê Văn Đức', 8, 'levanduc@email.com'),
+    ('C04', '4567890123', N'Phạm Thị Hương', 6, 'phamthihuong@email.com'),
+    ('C05', '5678901234', N'Hoàng Văn Nam', 9, 'hoangvannam@email.com'),
+    ('C06', '6789012345', N'Trịnh Thị Thảo', 4, 'trinhthithao@email.com'),
+    ('C07', '7890123456', N'Nguyễn Thị Mai', 7, 'nguyenthimai@email.com'),
+    ('C08', '8901234567', N'Lý Văn Minh', 3, 'lyvanminh@email.com'),
+    ('C09', '9012345678', N'Vũ Thị Phương', 8, 'vuthiphuong@email.com'),
+    ('C10', '0123456789', N'Ngô Văn Khánh', 2, 'ngovankhanh@email.com'),
+    ('C11', '1234567890', N'Phan Thị Trang', 4, 'phanthitrang@email.com'),
+    ('C12', '2345678901', N'Trương Văn Hiền', 6, 'truongvanhien@email.com'),
+    ('C13', '3456789012', N'Mai Thị Nga', 7, 'maithinga@email.com'),
+    ('C14', '4567890123', N'Vương Văn Thanh', 8, 'vuongvanthanh@email.com'),
+    ('C15', '5678901234', N'Đinh Thị Lan', 3, 'dinhthilan@email.com'),
+    ('C16', '6789012345', N'Lâm Văn Tùng', 5, 'lamvantung@email.com'),
+    ('C17', '7890123456', N'Võ Thị Hà', 6, 'vothiha@email.com'),
+    ('C18', '8901234567', N'Đặng Văn Trung', 4, 'dangvantrung@email.com'),
+    ('C19', '9012345678', N'Hồ Thị Lan', 7, 'hothilan@email.com'),
+    ('C20', '0123456789', N'Chu Văn Tuấn', 2, 'chuvantuan@email.com'),
+    ('C21', '1234567890', N'Lý Thị Vân', 6, 'lythivan@email.com'),
+    ('C22', '2345678901', N'Hà Văn Đoàn', 4, 'havandoan@email.com'),
+    ('C23', '3456789012', N'Nguyễn Văn Long', 5, 'nguyenvanlong@email.com'),
+    ('C24', '4567890123', N'Trần Thị Hằng', 8, 'tranthihang@email.com'),
+    ('C25', '5678901234', N'Lê Thị Ngọc', 3, 'lethingoc@email.com'),
+    ('C26', '6789012345', N'Phạm Thị Tuyết', 2, 'phamthituyet@email.com'),
+    ('C27', '7890123456', N'Vũ Văn Tâm', 7, 'vuvantam@email.com'),
+    ('C28', '8901234567', N'Trịnh Văn An', 6, 'trinhvanan@email.com'),
+    ('C29', '9012345678', N'Nguyễn Văn Hoàng', 9, 'nguyenvanhoang@email.com'),
+    ('C30', '0123456789', N'Lê Thị Kim', 5, 'lethikim@email.com');
+
+CREATE TABLE DISCOUNT
+(
+	D_ID VARCHAR(3) NOT NULL,
+	D_NAME VARCHAR(100),
+	D_START SMALLDATETIME,
+	D_FINISH SMALLDATETIME,
+	D_PERCENT INT
+	CONSTRAINT pk_discount PRIMARY KEY (D_ID)
+);
+INSERT INTO DISCOUNT (D_ID, D_NAME, D_START, D_FINISH, D_PERCENT)
+VALUES
+    ('D01', N'Mùa hoa đào rực rỡ', '2023-12-01', '2024-01-15', 10),
+    ('D02', N'Biển xanh vàng cát', '2023-12-05', '2024-01-20', 15),
+    ('D03', N'Khám phá văn hóa dân tộc', '2023-12-10', '2024-01-25', 20),
+    ('D04', N'Thành phố ánh đèn sáng lung linh', '2023-12-15', '2024-01-30', 12),
+    ('D05', N'Nét cổ kính và hiện đại hòa quyện', '2023-12-20', '2024-01-10', 8),
+    ('D06', N'Làng nghề truyền thống', '2023-12-25', '2024-01-05', 17),
+    ('D07', N'Bãi biển đẹp mê ly', '2023-12-02', '2024-01-18', 14),
+    ('D08', N'Hành trình mạo hiểm', '2023-12-08', '2024-01-28', 19),
+    ('D09', N'Thiên đàng biển đỏ', '2023-12-12', '2024-01-22', 11),
+    ('D10', N'Khu du lịch thiên đàng', '2023-12-18', '2024-01-15', 13),
+    ('D11', N'Phố cổ tình yêu', '2023-12-22', '2024-01-10', 9),
+    ('D12', N'Mộng mơ giữa thiên nhiên', '2023-12-26', '2024-01-02', 16),
+    ('D13', N'Lễ hội đèn lồng lung linh', '2023-12-03', '2024-01-29', 21),
+    ('D14', N'Trải nghiệm vùng quê bình yên', '2023-12-07', '2024-01-24', 18),
+    ('D15', N'Điểm đến hoàn hảo', '2023-12-13', '2024-01-19', 10),
+    ('D16', N'Khám phá vùng miền quê', '2023-12-19', '2024-01-25', 12),
+    ('D17', N'Hòa mình vào cuộc sống dân dã', '2023-12-23', '2024-01-15', 14),
+    ('D18', N'Lặn sâu khám phá đại dương', '2023-12-27', '2024-01-10', 7),
+    ('D19', N'Đảo thiên đàng', '2023-12-04', '2024-01-20', 9),
+    ('D20', N'Thiên đàng núi rừng', '2023-12-09', '2024-01-28', 11);
+	
+
+
+CREATE TABLE PLANE
+(
+	PL_ID VARCHAR(4) NOT NULL,
+	TYPEOFPLANE VARCHAR(20),
+	BUSINESS_CAPACITY INT,
+	ECONOMY_CAPACITY INT
+	CONSTRAINT pk_plane PRIMARY KEY (PL_ID)
+)
+
+INSERT INTO PLANE (PL_ID, TYPEOFPLANE, BUSINESS_CAPACITY, ECONOMY_CAPACITY)
+VALUES
+    ('PL01', 'Airbus A320', 12, 108),
+    ('PL02', 'Boeing 737', 12, 108),
+    ('PL03', 'Airbus A330', 12, 108),
+    ('PL04', 'Boeing 787', 12, 108),
+    ('PL05', 'Embraer E190', 12, 108),
+    ('PL06', 'Airbus A350', 12, 108),
+    ('PL07', 'Boeing 777', 12, 108),
+    ('PL08', 'Airbus A321', 12, 108),
+    ('PL09', 'Boeing 747', 12, 108),
+    ('PL10', 'Embraer E195', 12, 108),
+    ('PL11', 'Airbus A319', 12, 108),
+    ('PL12', 'Boeing 767', 12, 108),
+    ('PL13', 'Airbus A380', 12, 108),
+    ('PL14', 'Boeing 737 MAX', 12, 108),
+    ('PL15', 'Airbus A330neo', 12, 108),
+    ('PL16', 'Boeing 787-10', 12, 108),
+    ('PL17', 'Embraer E175', 12, 108),
+    ('PL18', 'Airbus A321XLR', 12, 108),
+    ('PL19', 'Boeing 777X', 12, 108),
+    ('PL20', 'Embraer E175-E2', 12, 108);
+
+CREATE TABLE FOOD
+(
+	F_ID VARCHAR(3) NOT NULL,
+	F_NAME VARCHAR(30),
+	F_PRICE VARCHAR(10),
+	CONSTRAINT pk_food PRIMARY KEY (F_ID)
+)
+INSERT INTO FOOD (F_ID, F_NAME, F_PRICE)
+VALUES
+    ('F01', 'Bữa sáng ấm áp', '150000'),
+    ('F02', 'Mì quảng', '120000'),
+    ('F03', 'Phở bò', '130000'),
+    ('F04', 'Bánh mì sandwich', '100000'),
+    ('F05', 'Gỏi cuốn', '110000'),
+    ('F06', 'Cơm gà hấp', '140000'),
+    ('F07', 'Bún riêu cua', '125000'),
+    ('F08', 'Bánh xèo', '130000'),
+    ('F09', 'Bánh mì pate', '90000'),
+    ('F10', 'Bún chả Hà Nội', '135000'),
+	('F11', 'Nước suối', '10000'),
+    ('F12', 'Nước ngọt', '15000'),
+    ('F13', 'Nước cam', '15000');
 
 
 
