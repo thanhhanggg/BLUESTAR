@@ -679,5 +679,65 @@ VALUES
     ('F12', 'Nước ngọt', '15000'),
     ('F13', 'Nước cam', '15000');
 
+    -----27/9/2023---------------LUGGAGE + SEAT
+    CREATE TABLE LUGGAGE 
+(
+     LUGGAGE_CODE VARCHAR(10) PRIMARY KEY,
+     MASS VARCHAR(5),
+     PRICE  INT
+)
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K07','7kg',30000)
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K10','10kg',30000)
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K20','50kg',30000)
+---SEAT TABLE
+CREATE TABLE SEAT 
+(
+     SEAT_ID VARCHAR(10) PRIMARY KEY,
+     SEAT_TYPE VARCHAR(20),
+     PRIVILEGE_CODE VARCHAR(2),  
+     FOREIGN KEY (PRIVILEGE_CODE) REFERENCES PRIVILEGE(PRIVILEGE_ID)
+)
+---PROCEDURE TO INSERT DATA TO CHONGOI
+CREATE PROCEDURE InsertDataToSeatUpdate
+AS
+BEGIN
+    DECLARE @ROW INT = 1;
+    DECLARE @COLUMN INT;
+    DECLARE @Prefix CHAR(1);
+    DECLARE @LOAICHO VARCHAR(20);
+    DECLARE @MADACQUYEN VARCHAR(2);
+    
+    WHILE @ROW <= 6
+    BEGIN
+        IF @ROW = 1 SET @Prefix = 'A';
+        IF @ROW = 2 SET @Prefix = 'B';
+        IF @ROW = 3 SET @Prefix = 'C';
+        IF @ROW = 4 SET @Prefix = 'D';
+        IF @ROW = 5 SET @Prefix = 'E';
+        IF @ROW = 6 SET @Prefix = 'F';
+        
+        SET @COLUMN = 1;
+        WHILE @COLUMN <= 20
+        BEGIN
+            IF @COLUMN <= 2
+                BEGIN
+					SET @LOAICHO = 'THUONGIA';
+					SET @MADACQUYEN = 1;
+				END
+			ELSE
+				BEGIN
+					SET @LOAICHO = 'THUONG';
+					SET @MADACQUYEN = 2;
+				END
+            
+           INSERT INTO SEAT( SEAT_ID, SEAT_TYPE,PRIVILEGE_CODE)
+			VALUES (@Prefix + FORMAT(@COLUMN, '00'), @LOAICHO,@MADACQUYEN);
 
+            
+            SET @COLUMN = @COLUMN + 1;
+        END
+        
+        SET @ROW = @ROW + 1;
+    END
+END;
 
