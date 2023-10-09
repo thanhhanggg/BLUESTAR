@@ -212,7 +212,7 @@ CREATE TABLE CHUYENBAY(
 	departureTime DATETIME,
 	arrivalTime DATETIME,
 	departureDay DATE,
-    originalPrice MONEY,
+    originalPrice MONEY DEFAULT 1000000,
 
 );
 
@@ -224,7 +224,7 @@ CREATE TABLE SANBAY(
 );
 
 
-INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay,originalPrice)
+INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay)
 VALUES
 	('F001', 'Hà Nội', 'Bà Rịa-Vũng Tàu', '08:00', '10:00', '2023-12-01'),
 	('F002', 'Hà Nội', 'Bình Định', '09:00', '11:00', '2023-12-02'),
@@ -695,11 +695,10 @@ CREATE PROCEDURE AddChuyenBay
     @departureTime TIME,
     @arrivalTime TIME,
     @departureDay DATE,
-    @originalPrice MONEY,
 AS
 BEGIN
-    INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay, originalPrice)
-    VALUES (@flyID, @fromLocation, @toLocation, @departureTime, @arrivalTime, @departureDay, @originalPrice);
+    INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay)
+    VALUES (@flyID, @fromLocation, @toLocation, @departureTime, @arrivalTime, @departureDay);
 END;
 -----xoa chuyen bay
 CREATE PROCEDURE dbo.DeleteChuyenBay
