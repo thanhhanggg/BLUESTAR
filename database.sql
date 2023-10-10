@@ -1,222 +1,8 @@
-CREATE DATABASE BlueStar;
-
-CREATE TABLE `bluestar`.`ticket` (`Ticket_ID` VARCHAR(4) NOT NULL , `CCCD` VARCHAR(12) NOT NULL , `Name` VARCHAR(50) NOT NULL , `Fly_ID` VARCHAR(4) NOT NULL , `Kg_ID` VARCHAR(3) NOT NULL , `Seat_ID` VARCHAR(3) NOT NULL , `Food_ID` VARCHAR(3) NULL DEFAULT NULL , `Ticket_Price` INT(10) NOT NULL , `Mail` VARCHAR(50) NOT NULL , `Dis_ID` INT(3) NULL DEFAULT NULL , PRIMARY KEY (`Ticket_ID`), UNIQUE (`Fly_ID`, `Seat_ID`, `CCCD`,`Name`,`Mail`), UNIQUE (`Fly_ID`, `Seat_ID`)) ENGINE = InnoDB;
-INSERT INTO `ticket` (`Ticket_ID`, `CCCD`, `Name`, `Fly_ID`, `Kg_ID`, `Seat_ID`, `Food_ID`, `Ticket_Price`, `Mail`, `Dis_ID`) VALUES 
-('T001', '923676706826', 'Phan Bảo Thanh ', 'F09', 'K50', 'D09', 'F07', 700000, 'reqpkjcr@gmail.com', 72),
-('T002', '509659544959', 'Bùi Mỹ Thành ', 'F17', 'K07', 'F17', 'F01', 1000000, 'sneujaew@gmail.com', 95),
-('T003', '527636769042', 'Phùng Thành Bình ', 'F20', 'K07', 'F20', 'F09', 2000000, 'pwixydtp@gmail.com', 7),
-('T004', '780579884688', 'Phan Văn Thị ', 'F28', 'K50', 'F28', 'F04', 800000, 'jvmwfudd@gmail.com', NULL),
-('T005', '128717000549', 'Châu Thành Tuấn ', 'F24', 'K07', 'B24', 'F04', 700000, 'afrzbgmf@gmail.com', NULL),
-('T006', '986240306308', 'Hồ Ngọc Tiến ', 'F15', 'K07', 'A15', 'F09', 2000000, 'selrinaj@gmail.com', 83),
-('T007', '769996733916', 'Lê Trung Thu ', 'F11', 'K20', 'E11', 'F03', 1200000, 'pzrpuact@gmail.com', NULL),
-('T008', '666518625995', 'Nguyễn Thuý Trí ', 'F18', 'K07', 'A18', 'F04', 1000000, 'nzycpaeb@gmail.com', NULL),
-('T009', '281997473875', 'Trần Ngọc Thành ', 'F04', 'K20', 'F04', 'F02', 1200000, 'umqsgutn@gmail.com', 64),
-('T010', '840231298539', 'Hồ Tiến Văn ', 'F10', 'K50', 'F10', 'F05', 800000, 'nppqerzc@gmail.com', NULL),
-('T011', '135943326250', 'Hồ Tiến Tiến ', 'F15', 'K07', 'F15', 'F08', 700000, 'obhoelqy@gmail.com', 90),
-('T012', '202492183468', 'Phùng Trọng Ngọc ', 'F27', 'K50', 'E27', 'F02', 1700000, 'bmxvuqmq@gmail.com', NULL),
-('T013', '057696678701', 'Thạch Thuỳ Tuấn ', 'F10', 'K20', 'F11', 'F03', 1200000, 'avoneukh@gmail.com', 8),
-('T014', '154426318154', 'Phan Mỹ Mỹ ', 'F08', 'K50', 'F08', 'F10', 700000, 'hkrgupcf@gmail.com', 27),
-('T015', '653498944350', 'Huỳnh Văn Thành ', 'F15', 'K07', 'D15', 'F08', 800000, 'bzgfoagn@gmail.com', NULL),
-('T016', '277130118940', 'Phạm Thuỳ Trí ', 'F22', 'K20', 'E22', 'F07', 1200000, 'zmplltbg@gmail.com', NULL),
-('T017', '881787145129', 'Lê Mỹ Đăng ', 'F27', 'K20', 'B27', 'F06', 2000000, 'urocxwep@gmail.com', 65),
-('T018', '174106102108', 'Lê Thiên Bình ', 'F15', 'K20', 'E15', 'F06', 1500000, 'veeufuce@gmail.com', 37),
-('T019', '904958839973', 'Thạch Trung Thuỳ ', 'F27', 'K20', 'A27', 'F09', 2000000, 'knzqaqbp@gmail.com', 56),
-('T020', '208542925163', 'Thạch Tiến Tiến ', 'F08', 'K20', 'D08', 'F06', 2000000, 'ezrohsev@gmail.com', 26),
-('T021', '867403042930', 'Võ Đăng Mỹ ', 'F01', 'K07', 'C01', 'F04', 1700000, 'lxsinzkw@gmail.com', 60),
-('T022', '459525084830', 'Hoàng Thanh Tiến ', 'F06', 'K07', 'F06', 'F08', 1700000, 'dpskbokh@gmail.com', 35),
-('T023', '907345516869', 'Huỳnh Trí Khang ', 'F30', 'K20', 'D30', 'F05', 700000, 'uzqowwdi@gmail.com', NULL),
-('T024', '314071500869', 'Nguyễn Mỹ Trung ', 'F06', 'K20', 'C06', 'F05', 700000, 'jmnspipq@gmail.com', 12),
-('T025', '825414550162', 'Phạm Thuý Mỹ ', 'F10', 'K20', 'F12', 'F06', 2000000, 'xczbyhag@gmail.com', 50),
-('T026', '171912269099', 'Võ Ngọc Tiến ', 'F30', 'K07', 'A30', 'F10', 2000000, 'zncpbvkf@gmail.com', 2),
-('T027', '444113310326', 'Lê Thiên Mỹ ', 'F18', 'K50', 'B18', 'F05', 1700000, 'njiyzyxy@gmail.com', 26),
-('T028', '759567832427', 'Võ Khang Khang ', 'F20', 'K50', 'D20', 'F03', 1700000, 'tpumvctw@gmail.com', NULL),
-('T029', '044112052680', 'Huỳnh Tiến Bình ', 'F16', 'K07', 'C16', 'F10', 800000, 'wqivsvll@gmail.com', 2),
-('T030', '203551868838', 'Châu Mỹ Thị ', 'F03', 'K50', 'A03', 'F07', 1700000, 'knmgjmak@gmail.com', NULL),
-('T031', '331974449322', 'Vũ Trí Bình ', 'F05', 'K50', 'E05', 'F04', 2000000, 'fczpzvzc@gmail.com', 10),
-('T032', '557425910583', 'Bùi Trọng Thu ', 'F13', 'K20', 'C13', 'F05', 2000000, 'gvfcpyec@gmail.com', NULL),
-('T033', '423493662131', 'Đặng Khang Mỹ ', 'F14', 'K20', 'A14', 'F04', 1200000, 'zjtsqkgk@gmail.com', 79),
-('T034', '647087038603', 'Hồ Thành Minh ', 'F15', 'K20', 'E16', 'F10', 1000000, 'gphrhidy@gmail.com', NULL),
-('T035', '851131484801', 'Vũ Trung Tiến ', 'F12', 'K20', 'A12', 'F07', 1700000, 'ctwssvhg@gmail.com', 56),
-('T036', '161482422113', 'Đặng Minh Trung ', 'F07', 'K50', 'F07', 'F05', 2000000, 'kdxzzkcc@gmail.com', NULL),
-('T037', '437201000088', 'Phùng Thuỳ Thuý ', 'F22', 'K20', 'A22', 'F06', 2000000, 'tbtkxhdj@gmail.com', 65),
-('T038', '991719754719', 'Nguyễn Minh Huy ', 'F01', 'K20', 'C02', 'F06', 1500000, 'ndixfhtw@gmail.com', NULL),
-('T039', '981479936688', 'Nguyễn Bình Thiên ', 'F21', 'K07', 'B21', 'F07', 2000000, 'dwuqmxad@gmail.com', 95),
-('T040', '304467797859', 'Đặng Thu Trí ', 'F26', 'K50', 'C26', 'F07', 1500000, 'mjlhcjdm@gmail.com', 20),
-('T041', '543299202539', 'Hoàng Trung Phúc ', 'F23', 'K50', 'A23', 'F08', 1700000, 'ubndwqkf@gmail.com', 38),
-('T042', '640205897797', 'Phùng Văn Ngọc ', 'F18', 'K07', 'F18', 'F03', 2000000, 'ekbgmxei@gmail.com', 54),
-('T043', '358400116765', 'Phan Thị Thu ', 'F13', 'K50', 'B13', 'F06', 1000000, 'wbwblydd@gmail.com', NULL),
-('T044', '634143933877', 'Phan Phúc Phúc ', 'F08', 'K07', 'C08', 'F04', 800000, 'smqsjulq@gmail.com', NULL),
-('T045', '640279162765', 'Phùng Huy Bảo ', 'F09', 'K20', 'C09', 'F04', 800000, 'sayaydac@gmail.com', 11),
-('T046', '617968740893', 'Trần Ngọc Khang ', 'F04', 'K50', 'F05', 'F09', 1200000, 'haxujogj@gmail.com', 63),
-('T047', '648221836433', 'Lê Văn Văn ', 'F30', 'K07', 'F30', 'F08', 800000, 'apuqtyiu@gmail.com', 25),
-('T048', '283668925730', 'Vũ Tuấn Thu ', 'F25', 'K50', 'F25', 'F10', 800000, 'hijiuath@gmail.com', NULL),
-('T049', '992622086378', 'Thạch Bình Thuỳ ', 'F01', 'K50', 'E01', 'F09', 800000, 'rzbqkllh@gmail.com', NULL),
-('T050', '153579216535', 'Vũ Huy Thiên ', 'F09', 'K07', 'C10', 'F04', 1500000, 'yamdhlxj@gmail.com', NULL),
-('T051', '704652106542', 'Châu Thu Tuấn ', 'F11', 'K07', 'C11', 'F04', 800000, 'uebolugn@gmail.com', 55),
-('T052', '767687936647', 'Phùng Mỹ Bảo ', 'F27', 'K50', 'D27', 'F06', 800000, 'yblknsaf@gmail.com', 29),
-('T053', '219457258748', 'Hoàng Nhật Minh ', 'F03', 'K50', 'D03', 'F09', 800000, 'sqzjcnpk@gmail.com', NULL),
-('T054', '112166585817', 'Phan Mỹ Văn ', 'F06', 'K07', 'F07', 'F10', 800000, 'ymuiulpx@gmail.com', NULL),
-('T055', '662378286114', 'Phùng Bảo Ngọc ', 'F27', 'K50', 'E28', 'F06', 1700000, 'bnngljqd@gmail.com', NULL),
-('T056', '139580516433', 'Hồ Thuý Trung ', 'F22', 'K07', 'E23', 'F01', 1000000, 'pozattfx@gmail.com', NULL),
-('T057', '975420444520', 'Nguyễn Minh Bảo ', 'F09', 'K07', 'A09', 'F01', 1500000, 'xpfrylqn@gmail.com', 12),
-('T058', '563056002095', 'Võ Bảo Khang ', 'F19', 'K50', 'B19', 'F05', 1500000, 'xhrprjrm@gmail.com', 59),
-('T059', '872041337121', 'Đặng Ngọc Minh ', 'F27', 'K50', 'D28', 'F04', 700000, 'pgdglebc@gmail.com', 14),
-('T060', '014632302023', 'Vũ Thành Trọng ', 'F21', 'K07', 'F21', 'F09', 1000000, 'esbzlbje@gmail.com', NULL),
-('T061', '982874498884', 'Nguyễn Bình Phúc ', 'F24', 'K07', 'D24', 'F05', 1700000, 'gxdwlovc@gmail.com', NULL),
-('T062', '585086790407', 'Trần Trí Văn ', 'F15', 'K50', 'B15', 'F02', 1500000, 'ijojavah@gmail.com', 65),
-('T063', '365827247706', 'Đặng Tuấn Tuấn ', 'F27', 'K50', 'A28', 'F02', 700000, 'snaswcyx@gmail.com', NULL),
-('T064', '859317090172', 'Phùng Nhật Tiến ', 'F18', 'K07', 'A19', 'F06', 1000000, 'xxbfqhkm@gmail.com', 32),
-('T065', '963684857479', 'Bùi Bảo Phước ', 'F16', 'K20', 'B16', 'F07', 2000000, 'omsrpfrk@gmail.com', NULL),
-('T066', '502817173602', 'Võ Thiên Phước ', 'F06', 'K50', 'E06', 'F09', 2000000, 'slccgzyi@gmail.com', NULL),
-('T067', '392089048341', 'Phan Minh Nhật ', 'F05', 'K07', 'F05', 'F09', 800000, 'rfoeplkk@gmail.com', NULL),
-('T068', '646277472635', 'Võ Thu Đăng ', 'F03', 'K07', 'E03', 'F01', 2000000, 'vgwenxiw@gmail.com', NULL),
-('T069', '976471288253', 'Lê Bình Nhật ', 'F30', 'K20', 'B01', 'F05', 800000, 'hmrtzvoj@gmail.com', NULL),
-('T070', '258895057247', 'Trần Thanh Thành ', 'F01', 'K20', 'F01', 'F02', 1700000, 'omwqtdhp@gmail.com', NULL),
-('T071', '784266887060', 'Nguyễn Văn Bình ', 'F30', 'K07', 'E01', 'F02', 700000, 'xpjrbbuw@gmail.com', 77),
-('T072', '471486563824', 'Phan Thanh Thuỳ ', 'F27', 'K20', 'E29', 'F09', 800000, 'tmgskqbb@gmail.com', NULL),
-('T073', '240393841141', 'Phùng Trọng Thu ', 'F07', 'K50', 'B07', 'F03', 1700000, 'uxqtrudf@gmail.com', NULL),
-('T074', '808802512294', 'Hồ Tiến Văn ', 'F13', 'K50', 'E13', 'F05', 1700000, 'mkufvnls@gmail.com', 71),
-('T075', '463740836742', 'Phạm Mỹ Văn ', 'F16', 'K50', 'B17', 'F08', 1700000, 'itfisghr@gmail.com', 2),
-('T076', '393861263998', 'Phạm Thanh Thu ', 'F15', 'K07', 'D16', 'F09', 700000, 'rmrzbbbt@gmail.com', 100),
-('T077', '344803619041', 'Trần Ngọc Trí ', 'F05', 'K20', 'D05', 'F01', 2000000, 'lobxgphy@gmail.com', 12),
-('T078', '661242477502', 'Hồ Thanh Thiên ', 'F06', 'K20', 'E07', 'F04', 1500000, 'pjpmwejk@gmail.com', NULL),
-('T079', '084316670456', 'Đặng Ngọc Khang ', 'F17', 'K50', 'B17', 'F05', 1500000, 'mkeokirj@gmail.com', 40),
-('T080', '709404393041', 'Trần Trung Huy ', 'F17', 'K07', 'E17', 'F07', 2000000, 'tktqjsfh@gmail.com', 57),
-('T081', '034237212637', 'Hồ Bảo Trung ', 'F22', 'K07', 'C22', 'F04', 1000000, 'nlhivocr@gmail.com', 72),
-('T082', '540270301273', 'Trần Ngọc Thiên ', 'F03', 'K50', 'F03', 'F08', 700000, 'hcdakihv@gmail.com', 99),
-('T083', '329581982082', 'Nguyễn Phúc Thiên ', 'F17', 'K50', 'D17', 'F07', 1700000, 'hqbwkwon@gmail.com', 83),
-('T084', '267126659636', 'Vũ Thị Thanh ', 'F30', 'K07', 'B02', 'F01', 800000, 'xdmmoiji@gmail.com', 29),
-('T085', '634202335404', 'Lê Mỹ Mỹ ', 'F10', 'K07', 'D10', 'F03', 1500000, 'mduojued@gmail.com', 90),
-('T086', '261028218938', 'Lê Trọng Trung ', 'F04', 'K50', 'A04', 'F01', 1700000, 'tttgmltg@gmail.com', NULL),
-('T087', '216855873482', 'Phùng Tuấn Thiên ', 'F01', 'K07', 'B01', 'F04', 1500000, 'sbbxyxwu@gmail.com', 50),
-('T088', '312147451835', 'Châu Trung Thị ', 'F09', 'K20', 'B09', 'F03', 1000000, 'pmzxlnno@gmail.com', NULL),
-('T089', '168749998736', 'Phan Tuấn Đăng ', 'F19', 'K07', 'C19', 'F04', 1700000, 'jdtnanta@gmail.com', NULL),
-('T090', '951749156059', 'Trần Bình Trọng ', 'F30', 'K50', 'C30', 'F06', 1000000, 'fheolyux@gmail.com', 87),
-('T091', '085580965460', 'Phùng Phước Đăng ', 'F29', 'K07', 'C29', 'F06', 1200000, 'vtvbvobe@gmail.com', NULL),
-('T092', '996120680471', 'Lê Thị Trung ', 'F08', 'K50', 'F09', 'F09', 1700000, 'ygonnifl@gmail.com', 97),
-('T093', '514649948679', 'Trần Thiên Minh ', 'F09', 'K50', 'A10', 'F04', 700000, 'fjggbxau@gmail.com', 54),
-('T094', '356131398512', 'Bùi Trọng Bình ', 'F08', 'K07', 'C09', 'F08', 1500000, 'acjibxft@gmail.com', NULL),
-('T095', '096669600368', 'Nguyễn Văn Trí ', 'F10', 'K07', 'A10', 'F07', 1500000, 'aehznllv@gmail.com', NULL),
-('T096', '703081751866', 'Hoàng Trung Phước ', 'F15', 'K07', 'A16', 'F10', 1700000, 'khphxsqy@gmail.com', NULL),
-('T097', '269037072826', 'Bùi Trung Bảo ', 'F12', 'K50', 'A13', 'F06', 1200000, 'jpjkrtkh@gmail.com', 18),
-('T098', '538429016143', 'Đặng Thuý Thuỳ ', 'F07', 'K07', 'D07', 'F05', 1200000, 'utxuuszr@gmail.com', NULL),
-('T099', '090248455943', 'Huỳnh Trí Trí ', 'F16', 'K20', 'A16', 'F05', 1200000, 'zjglssgf@gmail.com', NULL),
-('T100', '832813685356', 'Hoàng Minh Đăng ', 'F17', 'K50', 'F18', 'F10', 1200000, 'uwdyybzc@gmail.com', 66),
-('T101', '953782614948', 'Phạm Phước Đăng ', 'F29', 'K50', 'E29', 'F08', 1700000, 'olxszqyx@gmail.com', NULL),
-('T102', '487402815506', 'Lê Tuấn Trí ', 'F08', 'K50', 'A08', 'F07', 1500000, 'iusiivaf@gmail.com', NULL),
-('T103', '111681242101', 'Huỳnh Nhật Huy ', 'F03', 'K20', 'C03', 'F04', 700000, 'amfcjrut@gmail.com', NULL),
-('T104', '129457295188', 'Hoàng Minh Tuấn ', 'F12', 'K07', 'F12', 'F08', 1500000, 'yzzsxvsf@gmail.com', 97),
-('T105', '769977674357', 'Phùng Đăng Bảo ', 'F16', 'K20', 'D16', 'F02', 800000, 'oczoxruy@gmail.com', NULL),
-('T106', '412349515392', 'Bùi Thuỳ Tuấn ', 'F21', 'K20', 'D21', 'F03', 1500000, 'olaboyet@gmail.com', 60),
-('T107', '223047425051', 'Bùi Minh Bảo ', 'F05', 'K07', 'C05', 'F09', 1200000, 'zmgwrscn@gmail.com', 51),
-('T108', '447754066805', 'Đặng Thiên Thành ', 'F10', 'K07', 'F13', 'F10', 1000000, 'ioxsppuo@gmail.com', 55),
-('T109', '585593722725', 'Thạch Nhật Minh ', 'F10', 'K50', 'E10', 'F09', 1500000, 'gdlvclpd@gmail.com', NULL),
-('T110', '039820869155', 'Hồ Mỹ Thị ', 'F27', 'K50', 'D29', 'F03', 1000000, 'xikqadzc@gmail.com', 55),
-('T111', '552349529861', 'Phạm Trí Huy ', 'F09', 'K50', 'F09', 'F09', 1700000, 'xbtsntqs@gmail.com', 39),
-('T112', '708010237673', 'Châu Tiến Minh ', 'F27', 'K50', 'B28', 'F05', 1500000, 'wiopceic@gmail.com', NULL),
-('T113', '339850980791', 'Võ Bình Bảo ', 'F30', 'K20', 'D01', 'F06', 700000, 'wrfnszeh@gmail.com', 55),
-('T114', '053491237279', 'Thạch Nhật Thị ', 'F01', 'K07', 'A01', 'F04', 1200000, 'cpvinczl@gmail.com', NULL),
-('T115', '332689903944', 'Vũ Mỹ Thiên ', 'F20', 'K50', 'F21', 'F05', 700000, 'yhxmxkdz@gmail.com', NULL),
-('T116', '656870453377', 'Trần Phước Thuý ', 'F23', 'K07', 'B23', 'F09', 1000000, 'krksayvd@gmail.com', NULL),
-('T117', '045827579936', 'Phan Huy Thu ', 'F05', 'K07', 'A05', 'F10', 2000000, 'frolazrh@gmail.com', 84),
-('T118', '099300003644', 'Võ Phước Trung ', 'F04', 'K50', 'A05', 'F06', 1500000, 'jupppxco@gmail.com', 47),
-('T119', '432738375198', 'Hoàng Khang Tiến ', 'F03', 'K50', 'C04', 'F06', 700000, 'lmmajjxr@gmail.com', NULL),
-('T120', '224974355789', 'Võ Khang Khang ', 'F10', 'K07', 'C10', 'F06', 1500000, 'ksydhrxi@gmail.com', 85),
-('T121', '249139178433', 'Bùi Thuỳ Thuỳ ', 'F03', 'K20', 'E04', 'F09', 800000, 'oshwofec@gmail.com', NULL),
-('T122', '366491914383', 'Phan Trí Văn ', 'F16', 'K07', 'F16', 'F06', 1200000, 'kdmooxhu@gmail.com', NULL),
-('T123', '464738309708', 'Huỳnh Thuý Phúc ', 'F18', 'K20', 'D18', 'F09', 1200000, 'srpcpqlb@gmail.com', 54),
-('T124', '399982753063', 'Trần Tuấn Huy ', 'F22', 'K50', 'E24', 'F07', 1500000, 'gaflmbwy@gmail.com', NULL),
-('T125', '526949649593', 'Huỳnh Thành Huy ', 'F08', 'K20', 'A09', 'F02', 1700000, 'wqztxdwq@gmail.com', NULL),
-('T126', '860919346852', 'Châu Mỹ Thị ', 'F15', 'K20', 'C15', 'F10', 2000000, 'itqpchrl@gmail.com', NULL),
-('T127', '405915629413', 'Thạch Thành Mỹ ', 'F20', 'K50', 'E20', 'F10', 1700000, 'kicejjvm@gmail.com', NULL),
-('T128', '575170730914', 'Bùi Văn Mỹ ', 'F07', 'K20', 'A07', 'F03', 1700000, 'fpxawfjl@gmail.com', NULL),
-('T129', '828923053775', 'Phạm Đăng Thiên ', 'F07', 'K50', 'B08', 'F08', 800000, 'ntlcfeqq@gmail.com', 16),
-('T130', '982224627009', 'Võ Phước Phúc ', 'F03', 'K07', 'F04', 'F05', 800000, 'wjefymlm@gmail.com', NULL),
-('T131', '748897323491', 'Huỳnh Trọng Bình ', 'F26', 'K20', 'A26', 'F09', 2000000, 'koanczop@gmail.com', NULL),
-('T132', '403809987715', 'Hoàng Minh Khang ', 'F15', 'K07', 'E17', 'F10', 800000, 'rtglzqtb@gmail.com', 69),
-('T133', '754963901268', 'Vũ Huy Thanh ', 'F04', 'K20', 'B04', 'F04', 1700000, 'cvxynmvf@gmail.com', 30),
-('T134', '018114007816', 'Nguyễn Huy Bảo ', 'F05', 'K20', 'F06', 'F08', 1200000, 'dawlzfud@gmail.com', 64),
-('T135', '888307979717', 'Hồ Thuý Tiến ', 'F18', 'K50', 'C18', 'F03', 1700000, 'dsbftlan@gmail.com', NULL),
-('T136', '032045309654', 'Phùng Thu Mỹ ', 'F01', 'K20', 'C03', 'F06', 800000, 'bylqoytj@gmail.com', NULL),
-('T137', '367120486522', 'Nguyễn Nhật Trung ', 'F30', 'K07', 'D02', 'F05', 1700000, 'kckjxgfi@gmail.com', 96),
-('T138', '433112913039', 'Thạch Ngọc Trí ', 'F29', 'K50', 'A29', 'F05', 800000, 'ohoaiual@gmail.com', 9),
-('T139', '363688648429', 'Phùng Thiên Tuấn ', 'F11', 'K07', 'C12', 'F07', 1000000, 'qfrcukcl@gmail.com', 33),
-('T140', '651922071250', 'Trần Thị Thanh ', 'F06', 'K20', 'B06', 'F02', 1500000, 'fuvionkt@gmail.com', NULL),
-('T141', '978433861400', 'Trần Ngọc Trung ', 'F25', 'K07', 'B25', 'F07', 1000000, 'ifiscxqc@gmail.com', 6),
-('T142', '342804258134', 'Đặng Tuấn Thanh ', 'F20', 'K07', 'A20', 'F05', 700000, 'jkhnsvbh@gmail.com', NULL),
-('T143', '765893091778', 'Trần Nhật Văn ', 'F17', 'K07', 'F1', 'F01', 800000, 'eqxfrygi@gmail.com', NULL),
-('T144', '734886854000', 'Phùng Trí Đăng ', 'F08', 'K20', 'C10', 'F01', 1500000, 'rjbvzfhx@gmail.com', NULL),
-('T145', '518690977624', 'Phạm Mỹ Thị ', 'F10', 'K20', 'E11', 'F07', 700000, 'vbgehiet@gmail.com', 94),
-('T146', '545684987035', 'Nguyễn Nhật Văn ', 'F01', 'K50', 'E02', 'F06', 2000000, 'xjrlbxmw@gmail.com', 45),
-('T147', '218911575351', 'Đặng Phúc Trí ', 'F11', 'K07', 'B11', 'F07', 1200000, 'ltecfqex@gmail.com', NULL),
-('T148', '987251047733', 'Châu Thu Thị ', 'F11', 'K50', 'F11', 'F01', 1500000, 'qrdtorer@gmail.com', 59),
-('T149', '048088318422', 'Phùng Thu Văn ', 'F02', 'K50', 'A02', 'F02', 800000, 'qrsegrht@gmail.com', NULL),
-('T150', '425984609602', 'Bùi Đăng Trí ', 'F13', 'K07', 'D13', 'F01', 700000, 'bazxyjuk@gmail.com', NULL),
-('T151', '133657244485', 'Phạm Thuý Đăng ', 'F15', 'K20', 'D17', 'F01', 1200000, 'wbbyirum@gmail.com', NULL),
-('T152', '223023432755', 'Vũ Trung Tiến ', 'F10', 'K07', 'B10', 'F09', 1700000, 'ugpvjnef@gmail.com', 7),
-('T153', '005618712138', 'Phạm Tuấn Thiên ', 'F02', 'K07', 'B02', 'F03', 1200000, 'wwqnietk@gmail.com', 10),
-('T154', '130019890688', 'Võ Mỹ Nhật ', 'F19', 'K20', 'D19', 'F09', 800000, 'ptjjvusc@gmail.com', 39),
-('T155', '791622472379', 'Bùi Thuỳ Phước ', 'F23', 'K07', 'A24', 'F03', 1000000, 'zcoeejey@gmail.com', NULL),
-('T156', '353562706453', 'Huỳnh Bình Nhật ', 'F03', 'K50', 'D04', 'F08', 1200000, 'srrdlvbn@gmail.com', NULL),
-('T157', '645853051253', 'Nguyễn Trí Tuấn ', 'F18', 'K20', 'F19', 'F02', 1500000, 'gdcasbrv@gmail.com', NULL),
-('T158', '080848206001', 'Phạm Phước Ngọc ', 'F30', 'K07', 'D03', 'F09', 1000000, 'ptiokkgu@gmail.com', NULL),
-('T159', '404938155713', 'Hồ Mỹ Trọng ', 'F20', 'K20', 'E21', 'F10', 1500000, 'kebjoejx@gmail.com', 77),
-('T160', '309100758714', 'Nguyễn Phước Khang ', 'F04', 'K07', 'B05', 'F03', 1500000, 'avfhselm@gmail.com', 59),
-('T161', '344786152126', 'Châu Thu Thị ', 'F17', 'K50', 'C17', 'F05', 800000, 'mckhroca@gmail.com', NULL),
-('T162', '331241244962', 'Phan Văn Huy ', 'F03', 'K07', 'A04', 'F03', 1000000, 'jqxvetoq@gmail.com', NULL),
-('T163', '123119448934', 'Phùng Thị Mỹ ', 'F28', 'K50', 'F29', 'F07', 2000000, 'yisgznea@gmail.com', NULL),
-('T164', '402489465669', 'Hồ Thu Trung ', 'F23', 'K20', 'C23', 'F05', 1200000, 'mbhazzvb@gmail.com', 28),
-('T165', '191515911023', 'Trần Tiến Bảo ', 'F01', 'K20', 'B02', 'F02', 2000000, 'gzksylfm@gmail.com', NULL),
-('T166', '026598152104', 'Bùi Phúc Thiên ', 'F06', 'K50', 'D06', 'F06', 800000, 'dcimqhmt@gmail.com', 79),
-('T167', '399136718759', 'Phùng Phúc Thuý ', 'F22', 'K07', 'D22', 'F10', 700000, 'lukibjdg@gmail.com', 14),
-('T168', '987209177834', 'Phùng Thiên Mỹ ', 'F30', 'K07', 'B03', 'F07', 800000, 'fqbyzqkv@gmail.com', 25),
-('T169', '136373776898', 'Phùng Phước Thuý ', 'F07', 'K50', 'E07', 'F09', 800000, 'qrcklhow@gmail.com', 89),
-('T170', '044792511186', 'Phan Tiến Phúc ', 'F27', 'K50', 'D30', 'F07', 1200000, 'cterrmbe@gmail.com', 10),
-('T171', '975935399270', 'Nguyễn Thanh Trọng ', 'F25', 'K50', 'B26', 'F05', 2000000, 'cpxbboyx@gmail.com', NULL),
-('T172', '298667108732', 'Nguyễn Khang Khang ', 'F17', 'K50', 'B18', 'F05', 1500000, 'kuufqyne@gmail.com', NULL),
-('T173', '346355027980', 'Lê Mỹ Ngọc ', 'F01', 'K07', 'A03', 'F06', 1500000, 'qxpriokl@gmail.com', 8),
-('T174', '529997256887', 'Trần Đăng Nhật ', 'F26', 'K50', 'A27', 'F05', 1500000, 'crwhvemx@gmail.com', 98),
-('T175', '426103431455', 'Đặng Ngọc Bảo ', 'F25', 'K20', 'D25', 'F09', 1700000, 'nmquiqhw@gmail.com', NULL),
-('T176', '238597687883', 'Đặng Bảo Văn ', 'F06', 'K50', 'D07', 'F09', 700000, 'titoylqe@gmail.com', 69),
-('T177', '303907823240', 'Phạm Bình Thu ', 'F13', 'K50', 'E14', 'F08', 1200000, 'mffihhnp@gmail.com', 53),
-('T178', '747198037199', 'Nguyễn Phúc Thành ', 'F16', 'K07', 'A17', 'F05', 700000, 'owrxwsvy@gmail.com', NULL),
-('T179', '360503973923', 'Huỳnh Thành Khang ', 'F01', 'K07', 'F02', 'F08', 1500000, 'fybhxnny@gmail.com', 78),
-('T180', '080443726357', 'Trần Mỹ Tiến ', 'F01', 'K50', 'B03', 'F01', 2000000, 'tzkdnjhe@gmail.com', NULL),
-('T181', '343814724683', 'Phùng Khang Trọng ', 'F01', 'K50', 'A02', 'F07', 1500000, 'mzpjqxfi@gmail.com', NULL),
-('T182', '577869223455', 'Phan Phước Ngọc ', 'F03', 'K20', 'A05', 'F08', 1500000, 'nbkmcpvw@gmail.com', NULL),
-('T183', '815874440013', 'Phạm Thuý Bình ', 'F13', 'K07', 'D14', 'F06', 1000000, 'qhhitvcx@gmail.com', 35),
-('T184', '605751635947', 'Đặng Mỹ Mỹ ', 'F09', 'K20', 'A11', 'F09', 2000000, 'ljlkbebt@gmail.com', 55),
-('T185', '326464432543', 'Đặng Bình Tiến ', 'F04', 'K07', 'D04', 'F08', 1000000, 'sxrjhixe@gmail.com', 36),
-('T186', '993448649180', 'Huỳnh Thiên Trọng ', 'F09', 'K50', 'B10', 'F03', 1500000, 'wlnavlbk@gmail.com', NULL),
-('T187', '511752432874', 'Châu Phúc Văn ', 'F22', 'K20', 'B22', 'F08', 1200000, 'hvqrazej@gmail.com', NULL),
-('T188', '190394797628', 'Trần Minh Phúc ', 'F15', 'K07', 'D18', 'F07', 700000, 'evgqsnkf@gmail.com', 76),
-('T189', '478365074351', 'Châu Bình Phúc ', 'F29', 'K20', 'C30', 'F04', 700000, 'alhvponj@gmail.com', 1),
-('T190', '276792005688', 'Hoàng Đăng Trung ', 'F24', 'K07', 'F24', 'F10', 800000, 'wycppihl@gmail.com', 98),
-('T191', '574199112225', 'Bùi Khang Thiên ', 'F22', 'K50', 'A23', 'F03', 800000, 'kcemuyct@gmail.com', 45),
-('T192', '362380383049', 'Nguyễn Trí Trí ', 'F22', 'K50', 'C23', 'F10', 700000, 'zaiwjvle@gmail.com', 73),
-('T193', '865585032334', 'Châu Thuý Nhật ', 'F22', 'K50', 'B23', 'F02', 1200000, 'uwpsifjb@gmail.com', NULL),
-('T194', '850558761351', 'Châu Khang Văn ', 'F26', 'K07', 'C27', 'F09', 1700000, 'lkcltwam@gmail.com', NULL),
-('T195', '965862019222', 'Trần Khang Phúc ', 'F05', 'K20', 'A06', 'F04', 2000000, 'atbyftbu@gmail.com', 6),
-('T196', '050117086357', 'Trần Tuấn Nhật ', 'F01', 'K50', 'D02', 'F07', 700000, 'sqentswd@gmail.com', 35),
-('T197', '403528072980', 'Lê Trung Trung ', 'F17', 'K50', 'A17', 'F07', 1500000, 'uftavilm@gmail.com', 45),
-('T198', '610328817593', 'Huỳnh Mỹ Thuỳ ', 'F10', 'K50', 'D11', 'F06', 1200000, 'lcrlspfa@gmail.com', NULL),
-('T199', '953394257293', 'Phùng Thanh Mỹ ', 'F14', 'K50', 'F14', 'F08', 800000, 'boibkwvu@gmail.com', 42),
-('T200', '535152380628', 'Thạch Trọng Trung ', 'F09', 'K20', 'E09', 'F09', 1700000, 'czwofbqz@gmail.com', NULL);
+CREATE DATABASE BLUESTAR COLLATE LATIN1_GENERAL_100_CI_AS_SC_UTF8;
+USE BLUESTAR
 
 
-
-CREATE TABLE CHUYENBAY(
-	flyID NVARCHAR(20) primary key not null,
-	fromLocation NVARCHAR(255),
-	toLocation NVARCHAR(255),
-	departureTime DATETIME,
-	arrivalTime DATETIME,
-	departureDay DATE,
-    originalPrice MONEY DEFAULT 1000000,
-
-);
-
-CREATE TABLE SANBAY(
+CREATE TABLE SANBAY (
 	airportID NVARCHAR(20) primary key not null,
 	airportName  NVARCHAR(255),
 	place  NVARCHAR(255),
@@ -224,28 +10,107 @@ CREATE TABLE SANBAY(
 );
 
 
+INSERT INTO SANBAY (airportID, airportName, place) 
+VALUES 
+('VVCS', 'Sân bay Côn Đảo', 'Bà Rịa - Vũng Tàu'),
+('VVPC', 'Sân bay Phù Cát', 'Bình Định'),
+('VVCM', 'Sân bay Cà Mau', 'Cà Mau'),
+('VVCT', 'Sân bay quốc tế Cần Thơ', 'Cần Thơ'),
+('VVBM', 'Sân bay Buôn Ma Thuột', 'Đắk Lắk'),
+('VVDN', 'Sân bay quốc tế Đà Nẵng', 'Đà Nẵng'),
+('VVDB', 'Sân bay Điện Biên Phủ', 'Điện Biên'),
+('VVPK', 'Sân bay Pleiku', 'Gia Lai'),
+('VVCI', 'Sân bay quốc tế Cát Bi', 'Hải Phòng'),
+('VVNB', 'Sân bay quốc tế Nội Bài', 'Hà Nội'),
+('VVTS', 'Sân bay quốc tế Tân Sơn Nhất', 'TPHCM'),
+('VVCR', 'Sân bay quốc tế Cam Ranh', 'Khánh Hòa'),
+('VVRG', 'Sân bay Rạch Giá', 'Kiên Giang'),
+('VVPQ', 'Sân bay quốc tế Phú Quốc', 'Kiên Giang'),
+('VVDL', 'Sân bay Liên Khương', 'Lâm Đồng'),
+('VVVH', 'Sân bay quốc tế Vinh', 'Nghệ An'),
+('VVTH', 'Sân bay Tuy Hòa', 'Phú Yên'),
+('VVDH', 'Sân bay Đồng Hới', 'Quảng Bình'),
+('VVCA', 'Sân bay Chu Lai', 'Quảng Nam'),
+('VVTX', 'Sân bay Thọ Xuân', 'Thanh Hóa'),
+('VVPB', 'Sân bay quốc tế Phú Bài', 'Thừa Thiên - Huế');
+
+
+
+
+CREATE TABLE PLANE
+(
+	PL_ID VARCHAR(4) NOT NULL,
+	TYPEOFPLANE VARCHAR(20),
+	BUSINESS_CAPACITY INT,
+	ECONOMY_CAPACITY INT
+	CONSTRAINT pk_plane PRIMARY KEY (PL_ID)
+)
+
+INSERT INTO PLANE (PL_ID, TYPEOFPLANE, BUSINESS_CAPACITY, ECONOMY_CAPACITY)
+VALUES
+    ('PL01', 'Airbus A320', 12, 108),
+    ('PL02', 'Boeing 737', 12, 108),
+    ('PL03', 'Airbus A330', 12, 108),
+    ('PL04', 'Boeing 787', 12, 108),
+    ('PL05', 'Embraer E190', 12, 108),
+    ('PL06', 'Airbus A350', 12, 108),
+    ('PL07', 'Boeing 777', 12, 108),
+    ('PL08', 'Airbus A321', 12, 108),
+    ('PL09', 'Boeing 747', 12, 108),
+    ('PL10', 'Embraer E195', 12, 108),
+    ('PL11', 'Airbus A319', 12, 108),
+    ('PL12', 'Boeing 767', 12, 108),
+    ('PL13', 'Airbus A380', 12, 108),
+    ('PL14', 'Boeing 737 MAX', 12, 108),
+    ('PL15', 'Airbus A330neo', 12, 108),
+    ('PL16', 'Boeing 787-10', 12, 108),
+    ('PL17', 'Embraer E175', 12, 108),
+    ('PL18', 'Airbus A321XLR', 12, 108),
+    ('PL19', 'Boeing 777X', 12, 108),
+    ('PL20', 'Embraer E175-E2', 12, 108);
+
+
+
+CREATE TABLE CHUYENBAY(
+	flyID NVARCHAR(20) primary key not null,
+	Pl_ID NVARCHAR(5),
+	airport_ID NVARCHAR(5),
+	fromLocation NVARCHAR(255),
+	toLocation NVARCHAR(255),
+	departureTime DATETIME,
+	arrivalTime DATETIME,
+	departureDay DATE,
+    originalPrice MONEY,
+);
+
+
+
+INSERT INTO CHUYENBAY (flyID, Pl_ID, fromLocation, toLocation, departureTime, arrivalTime, departureDay)
+VALUES
+	('F001','PL01','Hà Nội', 'Bà Rịa-Vũng Tàu', '08:00', '10:00', '2023-12-01'),
+	('F002','PL02','Hà Nội', 'Bình Định', '09:00', '11:00', '2023-12-02'),
+	('F003','PL03', 'Hà Nội', 'Cà Mau', '10:00', '12:00', '2023-12-03'),
+	('F004','PL04', 'Hà Nội', 'Cần Thơ', '11:00', '13:00', '2023-12-04'),
+	('F005','PL05','Hà Nội', 'Đắk Lắk', '12:00', '14:00', '2023-12-05'),
+	('F006','PL06', 'Hà Nội', 'Đà Nẵng', '13:00', '15:00', '2023-12-06'),
+	('F007','PL07', 'Hà Nội', 'Điện Biên', '14:00', '16:00', '2023-12-07'),
+	('F008','PL08', 'Hà Nội', 'Gia Lai', '15:00', '17:00', '2023-12-08'),	
+	('F009','PL09', 'Hà Nội', 'Hải Phòng', '16:00', '18:00', '2023-12-09'),
+	('F010','PL10', 'Hà Nội', 'TPHCM', '17:00', '19:00', '2023-12-10'),
+	('F011','PL11', 'Hà Nội', 'Khánh Hòa', '18:00', '20:00', '2023-12-11'),
+	('F012','PL12', 'Hà Nội', 'Kiên Giang', '19:00', '21:00', '2023-12-12'),
+	('F014','PL14', 'Hà Nội', 'Lâm Đồng', '21:00', '23:00', '2023-12-14'),
+	('F015','PL15', 'Hà Nội', 'Nghệ An', '22:00', '00:00', '2023-12-15'),
+	('F016','PL16', 'Hà Nội', 'Phú Yên', '23:00', '01:00', '2023-12-16'),
+	('F017','PL17', 'Hà Nội', 'Quảng Bình', '00:00', '02:00', '2023-12-17'),
+	('F018','PL18', 'Hà Nội', 'Quảng Nam', '01:00', '03:00', '2023-12-18'),
+	('F019','PL19', 'Hà Nội', 'Thanh Hóa', '02:00', '04:00', '2023-12-19'),
+	('F020','PL20', 'Hà Nội', 'Thừa Thiên - Huế', '03:00', '05:00', '2023-12-20')
+
+
+
 INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay)
 VALUES
-	('F001', 'Hà Nội', 'Bà Rịa-Vũng Tàu', '08:00', '10:00', '2023-12-01'),
-	('F002', 'Hà Nội', 'Bình Định', '09:00', '11:00', '2023-12-02'),
-	('F003', 'Hà Nội', 'Cà Mau', '10:00', '12:00', '2023-12-03'),
-	('F004', 'Hà Nội', 'Cần Thơ', '11:00', '13:00', '2023-12-04'),
-	('F005', 'Hà Nội', 'Đắk Lắk', '12:00', '14:00', '2023-12-05'),
-	('F006', 'Hà Nội', 'Đà Nẵng', '13:00', '15:00', '2023-12-06'),
-	('F007', 'Hà Nội', 'Điện Biên', '14:00', '16:00', '2023-12-07'),
-	('F008', 'Hà Nội', 'Gia Lai', '15:00', '17:00', '2023-12-08'),	
-	('F009', 'Hà Nội', 'Hải Phòng', '16:00', '18:00', '2023-12-09'),
-	('F010', 'Hà Nội', 'TPHCM', '17:00', '19:00', '2023-12-10'),
-	('F011', 'Hà Nội', 'Khánh Hòa', '18:00', '20:00', '2023-12-11'),
-	('F012', 'Hà Nội', 'Kiên Giang', '19:00', '21:00', '2023-12-12'),
-	('F013', 'Hà Nội', 'Kiên Giang', '20:00', '22:00', '2023-12-13'),
-	('F014', 'Hà Nội', 'Lâm Đồng', '21:00', '23:00', '2023-12-14'),
-	('F015', 'Hà Nội', 'Nghệ An', '22:00', '00:00', '2023-12-15'),
-	('F016', 'Hà Nội', 'Phú Yên', '23:00', '01:00', '2023-12-16'),
-	('F017', 'Hà Nội', 'Quảng Bình', '00:00', '02:00', '2023-12-17'),
-	('F018', 'Hà Nội', 'Quảng Nam', '01:00', '03:00', '2023-12-18'),
-	('F019', 'Hà Nội', 'Thanh Hóa', '02:00', '04:00', '2023-12-19'),
-	('F020', 'Hà Nội', 'Thừa Thiên - Huế', '03:00', '05:00', '2023-12-20'),
 	-----
 ('F021', 'TPHCM', 'Bà Rịa-Vũng Tàu', '08:00', '10:00', '2023-12-01'),
 ('F022', 'TPHCM', 'Bình Định', '09:00', '11:00', '2023-12-02'),
@@ -661,139 +526,97 @@ VALUES
 ('F398', 'Thừa Thiên - Huế', 'Quảng Nam', '01:00', '03:00', '2023-12-22'),
 ('F399', 'Thừa Thiên - Huế', 'Thanh Hóa', '02:00', '04:00', '2023-12-23');
 
--------------
-    INSERT INTO SANBAY (airportID, airportName, place) 
-VALUES 
-('VVCS', 'Sân bay Côn Đảo', 'Bà Rịa-Vũng Tàu'),
-('VVPC', 'Sân bay Phù Cát', 'Bình Định'),
-('VVCM', 'Sân bay Cà Mau', 'Cà Mau'),
-('VVCT', 'Sân bay quốc tế Cần Thơ', 'Cần Thơ'),
-('VVBM', 'Sân bay Buôn Ma Thuột', 'Đắk Lắk'),
-('VVDN', 'Sân bay quốc tế Đà Nẵng', 'Đà Nẵng'),
-('VVDB', 'Sân bay Điện Biên Phủ', 'Điện Biên'),
-('VVPK', 'Sân bay Pleiku', 'Gia Lai'),
-('VVCI', 'Sân bay quốc tế Cát Bi', 'Hải Phòng'),
-('VVNB', 'Sân bay quốc tế Nội Bài', 'Hà Nội'),
-('VVTS', 'Sân bay quốc tế Tân Sơn Nhất', 'TPHCM'),
-('VVCR', 'Sân bay quốc tế Cam Ranh', 'Khánh Hòa'),
-('VVRG', 'Sân bay Rạch Giá', 'Kiên Giang'),
-('VVPQ', 'Sân bay quốc tế Phú Quốc', 'Kiên Giang'),
-('VVDL', 'Sân bay Liên Khương', 'Lâm Đồng'),
-('VVVH', 'Sân bay quốc tế Vinh', 'Nghệ An'),
-('VVTH', 'Sân bay Tuy Hòa', 'Phú Yên'),
-('VVDH', 'Sân bay Đồng Hới', 'Quảng Bình'),
-('VVCA', 'Sân bay Chu Lai', 'Quảng Nam'),
-('VVTX', 'Sân bay Thọ Xuân', 'Thanh Hóa'),
-('VVPB', 'Sân bay quốc tế Phú Bài', 'Thừa Thiên - Huế');
+
+--Thêm giá vé gốc và mã máy bay vào CHUYENBAY
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL01', originalPrice = 1000000
+WHERE toLocation = 'Hải Phòng' 
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL02', originalPrice = 1100000
+WHERE toLocation = 'Bà Rịa - Vũng Tàu'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL03', originalPrice = 1300000
+WHERE toLocation = 'Bình Định'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL04', originalPrice = 1300000
+WHERE toLocation = 'Cà Mau'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL05', originalPrice = 1500000
+WHERE toLocation = 'Cần Thơ'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL06', originalPrice = 1000000
+WHERE toLocation = 'Đắk Lắk'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL07', originalPrice = 1600000
+WHERE toLocation = 'Đà Nẵng'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL08', originalPrice = 1900000
+WHERE toLocation = 'Điện Biên'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL09', originalPrice = 1900000
+WHERE toLocation = 'Gia Lai'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL10', originalPrice = 1000000
+WHERE toLocation = 'TPHCM'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL11', originalPrice = 1200000
+WHERE toLocation = 'Khánh Hòa'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL12', originalPrice = 1400000
+WHERE toLocation = 'Kiên Giang'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL013', originalPrice = 1000000
+WHERE toLocation = 'Lâm Đồng'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL14', originalPrice = 1800000
+WHERE toLocation = 'Nghệ An'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL15', originalPrice = 1700000
+WHERE toLocation = 'Phú Yên'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL16', originalPrice = 1400000
+WHERE toLocation = 'Quảng Bình'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL17', originalPrice = 1300000
+WHERE toLocation = 'Quảng Nam'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL18', originalPrice = 1500000
+WHERE toLocation = 'Thanh Hóa'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL19', originalPrice = 1100000
+WHERE toLocation = 'Thừa Thiên - Huế'
+
+UPDATE CHUYENBAY
+SET Pl_ID = 'PL20', originalPrice = 1000000
+WHERE toLocation = 'Hà Nội'
 
 
----them chuyen bay moi
-CREATE PROCEDURE AddChuyenBay
-    @flyID CHAR(20),
-    @fromLocation VARCHAR(255),
-    @toLocation VARCHAR(255),
-    @departureTime TIME,
-    @arrivalTime TIME,
-    @departureDay DATE,
-AS
-BEGIN
-    INSERT INTO CHUYENBAY (flyID, fromLocation, toLocation, departureTime, arrivalTime, departureDay)
-    VALUES (@flyID, @fromLocation, @toLocation, @departureTime, @arrivalTime, @departureDay);
-END;
------xoa chuyen bay
-CREATE PROCEDURE dbo.DeleteChuyenBay
-(
-    @flyID NVARCHAR(20)
-)
-AS
-BEGIN
-    DELETE FROM CHUYENBAY
-    WHERE flyID = @flyID;
-END;
 
-------
-EXECUTE dbo.DeleteChuyenBay @flyID = 'ID_Can_Xoa';
-
-----giờ khởi hành không muộn hơn giờ đến 
-CREATE TRIGGER CheckDepartureBeforeArrival
-ON CHUYENBAY
-AFTER INSERT, UPDATE
-AS
-BEGIN
-    IF EXISTS (
-        SELECT 1
-        FROM INSERTED
-        WHERE departureTime > arrivalTime
-    )
-    BEGIN
-        THROW 50001, 'Thời gian khởi hành không được trễ hơn thời gian đến.', 1;
-        ROLLBACK TRANSACTION;
-    END
-END;
-
-----------
-CREATE TRIGGER CheckLocations
-ON CHUYENBAY
-AFTER INSERT, UPDATE
-AS
-BEGIN
-    DECLARE @fromLocation NVARCHAR(255);
-    DECLARE @toLocation NVARCHAR(255);
-    
-    SELECT @fromLocation = fromLocation, @toLocation = toLocation
-    FROM INSERTED;
-
-    IF @fromLocation = @toLocation
-    BEGIN
-        THROW 50001, 'fromLocation và toLocation không thể giống nhau trong cùng một chuyến bay.', 1;
-        ROLLBACK TRANSACTION;
-    END
-END;
+--Cập nhật trường airport_id trong bảng CHUYENBAY
+UPDATE CHUYENBAY
+SET airport_ID = SANBAY.airportID
+FROM CHUYENBAY
+INNER JOIN SANBAY ON CHUYENBAY.fromLocation = SANBAY.place;
 
 
-----------
-CREATE TABLE CUSTOMER
-(
-	C_ID VARCHAR(3) NOT NULL,
-	NUM_ID VARCHAR(20),
-	FULLNAME VARCHAR(100),
-	POINT INT,
-	MAIL VARCHAR(30),
-	CONSTRAINT pk_customer PRIMARY KEY (C_ID)
-);
-
-INSERT INTO CUSTOMER(C_ID, NUM_ID, FULLNAME, POINT, MAIL)
-VALUES
-    ('C01', '1234567890', N'Nguyễn Văn Hải', 5, 'nguyenvanhai@email.com'),
-    ('C02', '2345678901', N'Trần Thị Linh', 7, 'tranthinguyen@email.com'),
-    ('C03', '3456789012', N'Lê Văn Đức', 8, 'levanduc@email.com'),
-    ('C04', '4567890123', N'Phạm Thị Hương', 6, 'phamthihuong@email.com'),
-    ('C05', '5678901234', N'Hoàng Văn Nam', 9, 'hoangvannam@email.com'),
-    ('C06', '6789012345', N'Trịnh Thị Thảo', 4, 'trinhthithao@email.com'),
-    ('C07', '7890123456', N'Nguyễn Thị Mai', 7, 'nguyenthimai@email.com'),
-    ('C08', '8901234567', N'Lý Văn Minh', 3, 'lyvanminh@email.com'),
-    ('C09', '9012345678', N'Vũ Thị Phương', 8, 'vuthiphuong@email.com'),
-    ('C10', '0123456789', N'Ngô Văn Khánh', 2, 'ngovankhanh@email.com'),
-    ('C11', '1234567890', N'Phan Thị Trang', 4, 'phanthitrang@email.com'),
-    ('C12', '2345678901', N'Trương Văn Hiền', 6, 'truongvanhien@email.com'),
-    ('C13', '3456789012', N'Mai Thị Nga', 7, 'maithinga@email.com'),
-    ('C14', '4567890123', N'Vương Văn Thanh', 8, 'vuongvanthanh@email.com'),
-    ('C15', '5678901234', N'Đinh Thị Lan', 3, 'dinhthilan@email.com'),
-    ('C16', '6789012345', N'Lâm Văn Tùng', 5, 'lamvantung@email.com'),
-    ('C17', '7890123456', N'Võ Thị Hà', 6, 'vothiha@email.com'),
-    ('C18', '8901234567', N'Đặng Văn Trung', 4, 'dangvantrung@email.com'),
-    ('C19', '9012345678', N'Hồ Thị Lan', 7, 'hothilan@email.com'),
-    ('C20', '0123456789', N'Chu Văn Tuấn', 2, 'chuvantuan@email.com'),
-    ('C21', '1234567890', N'Lý Thị Vân', 6, 'lythivan@email.com'),
-    ('C22', '2345678901', N'Hà Văn Đoàn', 4, 'havandoan@email.com'),
-    ('C23', '3456789012', N'Nguyễn Văn Long', 5, 'nguyenvanlong@email.com'),
-    ('C24', '4567890123', N'Trần Thị Hằng', 8, 'tranthihang@email.com'),
-    ('C25', '5678901234', N'Lê Thị Ngọc', 3, 'lethingoc@email.com'),
-    ('C26', '6789012345', N'Phạm Thị Tuyết', 2, 'phamthituyet@email.com'),
-    ('C27', '7890123456', N'Vũ Văn Tâm', 7, 'vuvantam@email.com'),
-    ('C28', '8901234567', N'Trịnh Văn An', 6, 'trinhvanan@email.com'),
-    ('C29', '9012345678', N'Nguyễn Văn Hoàng', 9, 'nguyenvanhoang@email.com'),
-    ('C30', '0123456789', N'Lê Thị Kim', 5, 'lethikim@email.com');
 
 CREATE TABLE DISCOUNT
 (
@@ -829,37 +652,7 @@ VALUES
 	
 
 
-CREATE TABLE PLANE
-(
-	PL_ID VARCHAR(4) NOT NULL,
-	TYPEOFPLANE VARCHAR(20),
-	BUSINESS_CAPACITY INT,
-	ECONOMY_CAPACITY INT
-	CONSTRAINT pk_plane PRIMARY KEY (PL_ID)
-)
 
-INSERT INTO PLANE (PL_ID, TYPEOFPLANE, BUSINESS_CAPACITY, ECONOMY_CAPACITY)
-VALUES
-    ('PL01', 'Airbus A320', 12, 108),
-    ('PL02', 'Boeing 737', 12, 108),
-    ('PL03', 'Airbus A330', 12, 108),
-    ('PL04', 'Boeing 787', 12, 108),
-    ('PL05', 'Embraer E190', 12, 108),
-    ('PL06', 'Airbus A350', 12, 108),
-    ('PL07', 'Boeing 777', 12, 108),
-    ('PL08', 'Airbus A321', 12, 108),
-    ('PL09', 'Boeing 747', 12, 108),
-    ('PL10', 'Embraer E195', 12, 108),
-    ('PL11', 'Airbus A319', 12, 108),
-    ('PL12', 'Boeing 767', 12, 108),
-    ('PL13', 'Airbus A380', 12, 108),
-    ('PL14', 'Boeing 737 MAX', 12, 108),
-    ('PL15', 'Airbus A330neo', 12, 108),
-    ('PL16', 'Boeing 787-10', 12, 108),
-    ('PL17', 'Embraer E175', 12, 108),
-    ('PL18', 'Airbus A321XLR', 12, 108),
-    ('PL19', 'Boeing 777X', 12, 108),
-    ('PL20', 'Embraer E175-E2', 12, 108);
 
 CREATE TABLE FOOD
 (
@@ -870,425 +663,158 @@ CREATE TABLE FOOD
 )
 INSERT INTO FOOD (F_ID, F_NAME, F_PRICE)
 VALUES
-    ('F01', 'Bữa sáng ấm áp', '150000'),
-    ('F02', 'Mì quảng', '120000'),
-    ('F03', 'Phở bò', '130000'),
-    ('F04', 'Bánh mì sandwich', '100000'),
-    ('F05', 'Gỏi cuốn', '110000'),
-    ('F06', 'Cơm gà hấp', '140000'),
-    ('F07', 'Bún riêu cua', '125000'),
-    ('F08', 'Bánh xèo', '130000'),
-    ('F09', 'Bánh mì pate', '90000'),
-    ('F10', 'Bún chả Hà Nội', '135000'),
-	('F11', 'Nước suối', '10000'),
-    ('F12', 'Nước ngọt', '15000'),
-    ('F13', 'Nước cam', '15000');
-CREATE TABLE `bluestar`.`ticket` (`Ticket_ID` VARCHAR(4) NOT NULL , `CCCD` VARCHAR(12) NOT NULL , `Name` VARCHAR(50) NOT NULL , `Fly_ID` VARCHAR(4) NOT NULL , `Kg_ID` VARCHAR(3) NOT NULL , `Seat_ID` VARCHAR(3) NOT NULL , `Food_ID` VARCHAR(3) NULL DEFAULT NULL , `Ticket_Price` INT(10) NOT NULL , `Mail` VARCHAR(50) NOT NULL , `Dis_ID` INT(3) NULL DEFAULT NULL , PRIMARY KEY (`Ticket_ID`), UNIQUE (`Fly_ID`, `Seat_ID`, `CCCD`,`Name`,`Mail`), UNIQUE (`Fly_ID`, `Seat_ID`)) ENGINE = InnoDB;
-INSERT INTO `ticket` (`Ticket_ID`, `CCCD`, `Name`, `Fly_ID`, `Kg_ID`, `Seat_ID`, `Food_ID`, `Ticket_Price`, `Mail`, `Dis_ID`) VALUES 
-('T001', '923676706826', 'Phan Bảo Thanh ', 'F09', 'K50', 'D09', 'F07', 700000, 'reqpkjcr@gmail.com', 72),
-('T002', '509659544959', 'Bùi Mỹ Thành ', 'F17', 'K07', 'F17', 'F01', 1000000, 'sneujaew@gmail.com', 95),
-('T003', '527636769042', 'Phùng Thành Bình ', 'F20', 'K07', 'F20', 'F09', 2000000, 'pwixydtp@gmail.com', 7),
-('T004', '780579884688', 'Phan Văn Thị ', 'F28', 'K50', 'F28', 'F04', 800000, 'jvmwfudd@gmail.com', NULL),
-('T005', '128717000549', 'Châu Thành Tuấn ', 'F24', 'K07', 'B24', 'F04', 700000, 'afrzbgmf@gmail.com', NULL),
-('T006', '986240306308', 'Hồ Ngọc Tiến ', 'F15', 'K07', 'A15', 'F09', 2000000, 'selrinaj@gmail.com', 83),
-('T007', '769996733916', 'Lê Trung Thu ', 'F11', 'K20', 'E11', 'F03', 1200000, 'pzrpuact@gmail.com', NULL),
-('T008', '666518625995', 'Nguyễn Thuý Trí ', 'F18', 'K07', 'A18', 'F04', 1000000, 'nzycpaeb@gmail.com', NULL),
-('T009', '281997473875', 'Trần Ngọc Thành ', 'F04', 'K20', 'F04', 'F02', 1200000, 'umqsgutn@gmail.com', 64),
-('T010', '840231298539', 'Hồ Tiến Văn ', 'F10', 'K50', 'F10', 'F05', 800000, 'nppqerzc@gmail.com', NULL),
-('T011', '135943326250', 'Hồ Tiến Tiến ', 'F15', 'K07', 'F15', 'F08', 700000, 'obhoelqy@gmail.com', 90),
-('T012', '202492183468', 'Phùng Trọng Ngọc ', 'F27', 'K50', 'E27', 'F02', 1700000, 'bmxvuqmq@gmail.com', NULL),
-('T013', '057696678701', 'Thạch Thuỳ Tuấn ', 'F10', 'K20', 'F11', 'F03', 1200000, 'avoneukh@gmail.com', 8),
-('T014', '154426318154', 'Phan Mỹ Mỹ ', 'F08', 'K50', 'F08', 'F10', 700000, 'hkrgupcf@gmail.com', 27),
-('T015', '653498944350', 'Huỳnh Văn Thành ', 'F15', 'K07', 'D15', 'F08', 800000, 'bzgfoagn@gmail.com', NULL),
-('T016', '277130118940', 'Phạm Thuỳ Trí ', 'F22', 'K20', 'E22', 'F07', 1200000, 'zmplltbg@gmail.com', NULL),
-('T017', '881787145129', 'Lê Mỹ Đăng ', 'F27', 'K20', 'B27', 'F06', 2000000, 'urocxwep@gmail.com', 65),
-('T018', '174106102108', 'Lê Thiên Bình ', 'F15', 'K20', 'E15', 'F06', 1500000, 'veeufuce@gmail.com', 37),
-('T019', '904958839973', 'Thạch Trung Thuỳ ', 'F27', 'K20', 'A27', 'F09', 2000000, 'knzqaqbp@gmail.com', 56),
-('T020', '208542925163', 'Thạch Tiến Tiến ', 'F08', 'K20', 'D08', 'F06', 2000000, 'ezrohsev@gmail.com', 26),
-('T021', '867403042930', 'Võ Đăng Mỹ ', 'F01', 'K07', 'C01', 'F04', 1700000, 'lxsinzkw@gmail.com', 60),
-('T022', '459525084830', 'Hoàng Thanh Tiến ', 'F06', 'K07', 'F06', 'F08', 1700000, 'dpskbokh@gmail.com', 35),
-('T023', '907345516869', 'Huỳnh Trí Khang ', 'F30', 'K20', 'D30', 'F05', 700000, 'uzqowwdi@gmail.com', NULL),
-('T024', '314071500869', 'Nguyễn Mỹ Trung ', 'F06', 'K20', 'C06', 'F05', 700000, 'jmnspipq@gmail.com', 12),
-('T025', '825414550162', 'Phạm Thuý Mỹ ', 'F10', 'K20', 'F12', 'F06', 2000000, 'xczbyhag@gmail.com', 50),
-('T026', '171912269099', 'Võ Ngọc Tiến ', 'F30', 'K07', 'A30', 'F10', 2000000, 'zncpbvkf@gmail.com', 2),
-('T027', '444113310326', 'Lê Thiên Mỹ ', 'F18', 'K50', 'B18', 'F05', 1700000, 'njiyzyxy@gmail.com', 26),
-('T028', '759567832427', 'Võ Khang Khang ', 'F20', 'K50', 'D20', 'F03', 1700000, 'tpumvctw@gmail.com', NULL),
-('T029', '044112052680', 'Huỳnh Tiến Bình ', 'F16', 'K07', 'C16', 'F10', 800000, 'wqivsvll@gmail.com', 2),
-('T030', '203551868838', 'Châu Mỹ Thị ', 'F03', 'K50', 'A03', 'F07', 1700000, 'knmgjmak@gmail.com', NULL),
-('T031', '331974449322', 'Vũ Trí Bình ', 'F05', 'K50', 'E05', 'F04', 2000000, 'fczpzvzc@gmail.com', 10),
-('T032', '557425910583', 'Bùi Trọng Thu ', 'F13', 'K20', 'C13', 'F05', 2000000, 'gvfcpyec@gmail.com', NULL),
-('T033', '423493662131', 'Đặng Khang Mỹ ', 'F14', 'K20', 'A14', 'F04', 1200000, 'zjtsqkgk@gmail.com', 79),
-('T034', '647087038603', 'Hồ Thành Minh ', 'F15', 'K20', 'E16', 'F10', 1000000, 'gphrhidy@gmail.com', NULL),
-('T035', '851131484801', 'Vũ Trung Tiến ', 'F12', 'K20', 'A12', 'F07', 1700000, 'ctwssvhg@gmail.com', 56),
-('T036', '161482422113', 'Đặng Minh Trung ', 'F07', 'K50', 'F07', 'F05', 2000000, 'kdxzzkcc@gmail.com', NULL),
-('T037', '437201000088', 'Phùng Thuỳ Thuý ', 'F22', 'K20', 'A22', 'F06', 2000000, 'tbtkxhdj@gmail.com', 65),
-('T038', '991719754719', 'Nguyễn Minh Huy ', 'F01', 'K20', 'C02', 'F06', 1500000, 'ndixfhtw@gmail.com', NULL),
-('T039', '981479936688', 'Nguyễn Bình Thiên ', 'F21', 'K07', 'B21', 'F07', 2000000, 'dwuqmxad@gmail.com', 95),
-('T040', '304467797859', 'Đặng Thu Trí ', 'F26', 'K50', 'C26', 'F07', 1500000, 'mjlhcjdm@gmail.com', 20),
-('T041', '543299202539', 'Hoàng Trung Phúc ', 'F23', 'K50', 'A23', 'F08', 1700000, 'ubndwqkf@gmail.com', 38),
-('T042', '640205897797', 'Phùng Văn Ngọc ', 'F18', 'K07', 'F18', 'F03', 2000000, 'ekbgmxei@gmail.com', 54),
-('T043', '358400116765', 'Phan Thị Thu ', 'F13', 'K50', 'B13', 'F06', 1000000, 'wbwblydd@gmail.com', NULL),
-('T044', '634143933877', 'Phan Phúc Phúc ', 'F08', 'K07', 'C08', 'F04', 800000, 'smqsjulq@gmail.com', NULL),
-('T045', '640279162765', 'Phùng Huy Bảo ', 'F09', 'K20', 'C09', 'F04', 800000, 'sayaydac@gmail.com', 11),
-('T046', '617968740893', 'Trần Ngọc Khang ', 'F04', 'K50', 'F05', 'F09', 1200000, 'haxujogj@gmail.com', 63),
-('T047', '648221836433', 'Lê Văn Văn ', 'F30', 'K07', 'F30', 'F08', 800000, 'apuqtyiu@gmail.com', 25),
-('T048', '283668925730', 'Vũ Tuấn Thu ', 'F25', 'K50', 'F25', 'F10', 800000, 'hijiuath@gmail.com', NULL),
-('T049', '992622086378', 'Thạch Bình Thuỳ ', 'F01', 'K50', 'E01', 'F09', 800000, 'rzbqkllh@gmail.com', NULL),
-('T050', '153579216535', 'Vũ Huy Thiên ', 'F09', 'K07', 'C10', 'F04', 1500000, 'yamdhlxj@gmail.com', NULL),
-('T051', '704652106542', 'Châu Thu Tuấn ', 'F11', 'K07', 'C11', 'F04', 800000, 'uebolugn@gmail.com', 55),
-('T052', '767687936647', 'Phùng Mỹ Bảo ', 'F27', 'K50', 'D27', 'F06', 800000, 'yblknsaf@gmail.com', 29),
-('T053', '219457258748', 'Hoàng Nhật Minh ', 'F03', 'K50', 'D03', 'F09', 800000, 'sqzjcnpk@gmail.com', NULL),
-('T054', '112166585817', 'Phan Mỹ Văn ', 'F06', 'K07', 'F07', 'F10', 800000, 'ymuiulpx@gmail.com', NULL),
-('T055', '662378286114', 'Phùng Bảo Ngọc ', 'F27', 'K50', 'E28', 'F06', 1700000, 'bnngljqd@gmail.com', NULL),
-('T056', '139580516433', 'Hồ Thuý Trung ', 'F22', 'K07', 'E23', 'F01', 1000000, 'pozattfx@gmail.com', NULL),
-('T057', '975420444520', 'Nguyễn Minh Bảo ', 'F09', 'K07', 'A09', 'F01', 1500000, 'xpfrylqn@gmail.com', 12),
-('T058', '563056002095', 'Võ Bảo Khang ', 'F19', 'K50', 'B19', 'F05', 1500000, 'xhrprjrm@gmail.com', 59),
-('T059', '872041337121', 'Đặng Ngọc Minh ', 'F27', 'K50', 'D28', 'F04', 700000, 'pgdglebc@gmail.com', 14),
-('T060', '014632302023', 'Vũ Thành Trọng ', 'F21', 'K07', 'F21', 'F09', 1000000, 'esbzlbje@gmail.com', NULL),
-('T061', '982874498884', 'Nguyễn Bình Phúc ', 'F24', 'K07', 'D24', 'F05', 1700000, 'gxdwlovc@gmail.com', NULL),
-('T062', '585086790407', 'Trần Trí Văn ', 'F15', 'K50', 'B15', 'F02', 1500000, 'ijojavah@gmail.com', 65),
-('T063', '365827247706', 'Đặng Tuấn Tuấn ', 'F27', 'K50', 'A28', 'F02', 700000, 'snaswcyx@gmail.com', NULL),
-('T064', '859317090172', 'Phùng Nhật Tiến ', 'F18', 'K07', 'A19', 'F06', 1000000, 'xxbfqhkm@gmail.com', 32),
-('T065', '963684857479', 'Bùi Bảo Phước ', 'F16', 'K20', 'B16', 'F07', 2000000, 'omsrpfrk@gmail.com', NULL),
-('T066', '502817173602', 'Võ Thiên Phước ', 'F06', 'K50', 'E06', 'F09', 2000000, 'slccgzyi@gmail.com', NULL),
-('T067', '392089048341', 'Phan Minh Nhật ', 'F05', 'K07', 'F05', 'F09', 800000, 'rfoeplkk@gmail.com', NULL),
-('T068', '646277472635', 'Võ Thu Đăng ', 'F03', 'K07', 'E03', 'F01', 2000000, 'vgwenxiw@gmail.com', NULL),
-('T069', '976471288253', 'Lê Bình Nhật ', 'F30', 'K20', 'B01', 'F05', 800000, 'hmrtzvoj@gmail.com', NULL),
-('T070', '258895057247', 'Trần Thanh Thành ', 'F01', 'K20', 'F01', 'F02', 1700000, 'omwqtdhp@gmail.com', NULL),
-('T071', '784266887060', 'Nguyễn Văn Bình ', 'F30', 'K07', 'E01', 'F02', 700000, 'xpjrbbuw@gmail.com', 77),
-('T072', '471486563824', 'Phan Thanh Thuỳ ', 'F27', 'K20', 'E29', 'F09', 800000, 'tmgskqbb@gmail.com', NULL),
-('T073', '240393841141', 'Phùng Trọng Thu ', 'F07', 'K50', 'B07', 'F03', 1700000, 'uxqtrudf@gmail.com', NULL),
-('T074', '808802512294', 'Hồ Tiến Văn ', 'F13', 'K50', 'E13', 'F05', 1700000, 'mkufvnls@gmail.com', 71),
-('T075', '463740836742', 'Phạm Mỹ Văn ', 'F16', 'K50', 'B17', 'F08', 1700000, 'itfisghr@gmail.com', 2),
-('T076', '393861263998', 'Phạm Thanh Thu ', 'F15', 'K07', 'D16', 'F09', 700000, 'rmrzbbbt@gmail.com', 100),
-('T077', '344803619041', 'Trần Ngọc Trí ', 'F05', 'K20', 'D05', 'F01', 2000000, 'lobxgphy@gmail.com', 12),
-('T078', '661242477502', 'Hồ Thanh Thiên ', 'F06', 'K20', 'E07', 'F04', 1500000, 'pjpmwejk@gmail.com', NULL),
-('T079', '084316670456', 'Đặng Ngọc Khang ', 'F17', 'K50', 'B17', 'F05', 1500000, 'mkeokirj@gmail.com', 40),
-('T080', '709404393041', 'Trần Trung Huy ', 'F17', 'K07', 'E17', 'F07', 2000000, 'tktqjsfh@gmail.com', 57),
-('T081', '034237212637', 'Hồ Bảo Trung ', 'F22', 'K07', 'C22', 'F04', 1000000, 'nlhivocr@gmail.com', 72),
-('T082', '540270301273', 'Trần Ngọc Thiên ', 'F03', 'K50', 'F03', 'F08', 700000, 'hcdakihv@gmail.com', 99),
-('T083', '329581982082', 'Nguyễn Phúc Thiên ', 'F17', 'K50', 'D17', 'F07', 1700000, 'hqbwkwon@gmail.com', 83),
-('T084', '267126659636', 'Vũ Thị Thanh ', 'F30', 'K07', 'B02', 'F01', 800000, 'xdmmoiji@gmail.com', 29),
-('T085', '634202335404', 'Lê Mỹ Mỹ ', 'F10', 'K07', 'D10', 'F03', 1500000, 'mduojued@gmail.com', 90),
-('T086', '261028218938', 'Lê Trọng Trung ', 'F04', 'K50', 'A04', 'F01', 1700000, 'tttgmltg@gmail.com', NULL),
-('T087', '216855873482', 'Phùng Tuấn Thiên ', 'F01', 'K07', 'B01', 'F04', 1500000, 'sbbxyxwu@gmail.com', 50),
-('T088', '312147451835', 'Châu Trung Thị ', 'F09', 'K20', 'B09', 'F03', 1000000, 'pmzxlnno@gmail.com', NULL),
-('T089', '168749998736', 'Phan Tuấn Đăng ', 'F19', 'K07', 'C19', 'F04', 1700000, 'jdtnanta@gmail.com', NULL),
-('T090', '951749156059', 'Trần Bình Trọng ', 'F30', 'K50', 'C30', 'F06', 1000000, 'fheolyux@gmail.com', 87),
-('T091', '085580965460', 'Phùng Phước Đăng ', 'F29', 'K07', 'C29', 'F06', 1200000, 'vtvbvobe@gmail.com', NULL),
-('T092', '996120680471', 'Lê Thị Trung ', 'F08', 'K50', 'F09', 'F09', 1700000, 'ygonnifl@gmail.com', 97),
-('T093', '514649948679', 'Trần Thiên Minh ', 'F09', 'K50', 'A10', 'F04', 700000, 'fjggbxau@gmail.com', 54),
-('T094', '356131398512', 'Bùi Trọng Bình ', 'F08', 'K07', 'C09', 'F08', 1500000, 'acjibxft@gmail.com', NULL),
-('T095', '096669600368', 'Nguyễn Văn Trí ', 'F10', 'K07', 'A10', 'F07', 1500000, 'aehznllv@gmail.com', NULL),
-('T096', '703081751866', 'Hoàng Trung Phước ', 'F15', 'K07', 'A16', 'F10', 1700000, 'khphxsqy@gmail.com', NULL),
-('T097', '269037072826', 'Bùi Trung Bảo ', 'F12', 'K50', 'A13', 'F06', 1200000, 'jpjkrtkh@gmail.com', 18),
-('T098', '538429016143', 'Đặng Thuý Thuỳ ', 'F07', 'K07', 'D07', 'F05', 1200000, 'utxuuszr@gmail.com', NULL),
-('T099', '090248455943', 'Huỳnh Trí Trí ', 'F16', 'K20', 'A16', 'F05', 1200000, 'zjglssgf@gmail.com', NULL),
-('T100', '832813685356', 'Hoàng Minh Đăng ', 'F17', 'K50', 'F18', 'F10', 1200000, 'uwdyybzc@gmail.com', 66),
-('T101', '953782614948', 'Phạm Phước Đăng ', 'F29', 'K50', 'E29', 'F08', 1700000, 'olxszqyx@gmail.com', NULL),
-('T102', '487402815506', 'Lê Tuấn Trí ', 'F08', 'K50', 'A08', 'F07', 1500000, 'iusiivaf@gmail.com', NULL),
-('T103', '111681242101', 'Huỳnh Nhật Huy ', 'F03', 'K20', 'C03', 'F04', 700000, 'amfcjrut@gmail.com', NULL),
-('T104', '129457295188', 'Hoàng Minh Tuấn ', 'F12', 'K07', 'F12', 'F08', 1500000, 'yzzsxvsf@gmail.com', 97),
-('T105', '769977674357', 'Phùng Đăng Bảo ', 'F16', 'K20', 'D16', 'F02', 800000, 'oczoxruy@gmail.com', NULL),
-('T106', '412349515392', 'Bùi Thuỳ Tuấn ', 'F21', 'K20', 'D21', 'F03', 1500000, 'olaboyet@gmail.com', 60),
-('T107', '223047425051', 'Bùi Minh Bảo ', 'F05', 'K07', 'C05', 'F09', 1200000, 'zmgwrscn@gmail.com', 51),
-('T108', '447754066805', 'Đặng Thiên Thành ', 'F10', 'K07', 'F13', 'F10', 1000000, 'ioxsppuo@gmail.com', 55),
-('T109', '585593722725', 'Thạch Nhật Minh ', 'F10', 'K50', 'E10', 'F09', 1500000, 'gdlvclpd@gmail.com', NULL),
-('T110', '039820869155', 'Hồ Mỹ Thị ', 'F27', 'K50', 'D29', 'F03', 1000000, 'xikqadzc@gmail.com', 55),
-('T111', '552349529861', 'Phạm Trí Huy ', 'F09', 'K50', 'F09', 'F09', 1700000, 'xbtsntqs@gmail.com', 39),
-('T112', '708010237673', 'Châu Tiến Minh ', 'F27', 'K50', 'B28', 'F05', 1500000, 'wiopceic@gmail.com', NULL),
-('T113', '339850980791', 'Võ Bình Bảo ', 'F30', 'K20', 'D01', 'F06', 700000, 'wrfnszeh@gmail.com', 55),
-('T114', '053491237279', 'Thạch Nhật Thị ', 'F01', 'K07', 'A01', 'F04', 1200000, 'cpvinczl@gmail.com', NULL),
-('T115', '332689903944', 'Vũ Mỹ Thiên ', 'F20', 'K50', 'F21', 'F05', 700000, 'yhxmxkdz@gmail.com', NULL),
-('T116', '656870453377', 'Trần Phước Thuý ', 'F23', 'K07', 'B23', 'F09', 1000000, 'krksayvd@gmail.com', NULL),
-('T117', '045827579936', 'Phan Huy Thu ', 'F05', 'K07', 'A05', 'F10', 2000000, 'frolazrh@gmail.com', 84),
-('T118', '099300003644', 'Võ Phước Trung ', 'F04', 'K50', 'A05', 'F06', 1500000, 'jupppxco@gmail.com', 47),
-('T119', '432738375198', 'Hoàng Khang Tiến ', 'F03', 'K50', 'C04', 'F06', 700000, 'lmmajjxr@gmail.com', NULL),
-('T120', '224974355789', 'Võ Khang Khang ', 'F10', 'K07', 'C10', 'F06', 1500000, 'ksydhrxi@gmail.com', 85),
-('T121', '249139178433', 'Bùi Thuỳ Thuỳ ', 'F03', 'K20', 'E04', 'F09', 800000, 'oshwofec@gmail.com', NULL),
-('T122', '366491914383', 'Phan Trí Văn ', 'F16', 'K07', 'F16', 'F06', 1200000, 'kdmooxhu@gmail.com', NULL),
-('T123', '464738309708', 'Huỳnh Thuý Phúc ', 'F18', 'K20', 'D18', 'F09', 1200000, 'srpcpqlb@gmail.com', 54),
-('T124', '399982753063', 'Trần Tuấn Huy ', 'F22', 'K50', 'E24', 'F07', 1500000, 'gaflmbwy@gmail.com', NULL),
-('T125', '526949649593', 'Huỳnh Thành Huy ', 'F08', 'K20', 'A09', 'F02', 1700000, 'wqztxdwq@gmail.com', NULL),
-('T126', '860919346852', 'Châu Mỹ Thị ', 'F15', 'K20', 'C15', 'F10', 2000000, 'itqpchrl@gmail.com', NULL),
-('T127', '405915629413', 'Thạch Thành Mỹ ', 'F20', 'K50', 'E20', 'F10', 1700000, 'kicejjvm@gmail.com', NULL),
-('T128', '575170730914', 'Bùi Văn Mỹ ', 'F07', 'K20', 'A07', 'F03', 1700000, 'fpxawfjl@gmail.com', NULL),
-('T129', '828923053775', 'Phạm Đăng Thiên ', 'F07', 'K50', 'B08', 'F08', 800000, 'ntlcfeqq@gmail.com', 16),
-('T130', '982224627009', 'Võ Phước Phúc ', 'F03', 'K07', 'F04', 'F05', 800000, 'wjefymlm@gmail.com', NULL),
-('T131', '748897323491', 'Huỳnh Trọng Bình ', 'F26', 'K20', 'A26', 'F09', 2000000, 'koanczop@gmail.com', NULL),
-('T132', '403809987715', 'Hoàng Minh Khang ', 'F15', 'K07', 'E17', 'F10', 800000, 'rtglzqtb@gmail.com', 69),
-('T133', '754963901268', 'Vũ Huy Thanh ', 'F04', 'K20', 'B04', 'F04', 1700000, 'cvxynmvf@gmail.com', 30),
-('T134', '018114007816', 'Nguyễn Huy Bảo ', 'F05', 'K20', 'F06', 'F08', 1200000, 'dawlzfud@gmail.com', 64),
-('T135', '888307979717', 'Hồ Thuý Tiến ', 'F18', 'K50', 'C18', 'F03', 1700000, 'dsbftlan@gmail.com', NULL),
-('T136', '032045309654', 'Phùng Thu Mỹ ', 'F01', 'K20', 'C03', 'F06', 800000, 'bylqoytj@gmail.com', NULL),
-('T137', '367120486522', 'Nguyễn Nhật Trung ', 'F30', 'K07', 'D02', 'F05', 1700000, 'kckjxgfi@gmail.com', 96),
-('T138', '433112913039', 'Thạch Ngọc Trí ', 'F29', 'K50', 'A29', 'F05', 800000, 'ohoaiual@gmail.com', 9),
-('T139', '363688648429', 'Phùng Thiên Tuấn ', 'F11', 'K07', 'C12', 'F07', 1000000, 'qfrcukcl@gmail.com', 33),
-('T140', '651922071250', 'Trần Thị Thanh ', 'F06', 'K20', 'B06', 'F02', 1500000, 'fuvionkt@gmail.com', NULL),
-('T141', '978433861400', 'Trần Ngọc Trung ', 'F25', 'K07', 'B25', 'F07', 1000000, 'ifiscxqc@gmail.com', 6),
-('T142', '342804258134', 'Đặng Tuấn Thanh ', 'F20', 'K07', 'A20', 'F05', 700000, 'jkhnsvbh@gmail.com', NULL),
-('T143', '765893091778', 'Trần Nhật Văn ', 'F17', 'K07', 'F1', 'F01', 800000, 'eqxfrygi@gmail.com', NULL),
-('T144', '734886854000', 'Phùng Trí Đăng ', 'F08', 'K20', 'C10', 'F01', 1500000, 'rjbvzfhx@gmail.com', NULL),
-('T145', '518690977624', 'Phạm Mỹ Thị ', 'F10', 'K20', 'E11', 'F07', 700000, 'vbgehiet@gmail.com', 94),
-('T146', '545684987035', 'Nguyễn Nhật Văn ', 'F01', 'K50', 'E02', 'F06', 2000000, 'xjrlbxmw@gmail.com', 45),
-('T147', '218911575351', 'Đặng Phúc Trí ', 'F11', 'K07', 'B11', 'F07', 1200000, 'ltecfqex@gmail.com', NULL),
-('T148', '987251047733', 'Châu Thu Thị ', 'F11', 'K50', 'F11', 'F01', 1500000, 'qrdtorer@gmail.com', 59),
-('T149', '048088318422', 'Phùng Thu Văn ', 'F02', 'K50', 'A02', 'F02', 800000, 'qrsegrht@gmail.com', NULL),
-('T150', '425984609602', 'Bùi Đăng Trí ', 'F13', 'K07', 'D13', 'F01', 700000, 'bazxyjuk@gmail.com', NULL),
-('T151', '133657244485', 'Phạm Thuý Đăng ', 'F15', 'K20', 'D17', 'F01', 1200000, 'wbbyirum@gmail.com', NULL),
-('T152', '223023432755', 'Vũ Trung Tiến ', 'F10', 'K07', 'B10', 'F09', 1700000, 'ugpvjnef@gmail.com', 7),
-('T153', '005618712138', 'Phạm Tuấn Thiên ', 'F02', 'K07', 'B02', 'F03', 1200000, 'wwqnietk@gmail.com', 10),
-('T154', '130019890688', 'Võ Mỹ Nhật ', 'F19', 'K20', 'D19', 'F09', 800000, 'ptjjvusc@gmail.com', 39),
-('T155', '791622472379', 'Bùi Thuỳ Phước ', 'F23', 'K07', 'A24', 'F03', 1000000, 'zcoeejey@gmail.com', NULL),
-('T156', '353562706453', 'Huỳnh Bình Nhật ', 'F03', 'K50', 'D04', 'F08', 1200000, 'srrdlvbn@gmail.com', NULL),
-('T157', '645853051253', 'Nguyễn Trí Tuấn ', 'F18', 'K20', 'F19', 'F02', 1500000, 'gdcasbrv@gmail.com', NULL),
-('T158', '080848206001', 'Phạm Phước Ngọc ', 'F30', 'K07', 'D03', 'F09', 1000000, 'ptiokkgu@gmail.com', NULL),
-('T159', '404938155713', 'Hồ Mỹ Trọng ', 'F20', 'K20', 'E21', 'F10', 1500000, 'kebjoejx@gmail.com', 77),
-('T160', '309100758714', 'Nguyễn Phước Khang ', 'F04', 'K07', 'B05', 'F03', 1500000, 'avfhselm@gmail.com', 59),
-('T161', '344786152126', 'Châu Thu Thị ', 'F17', 'K50', 'C17', 'F05', 800000, 'mckhroca@gmail.com', NULL),
-('T162', '331241244962', 'Phan Văn Huy ', 'F03', 'K07', 'A04', 'F03', 1000000, 'jqxvetoq@gmail.com', NULL),
-('T163', '123119448934', 'Phùng Thị Mỹ ', 'F28', 'K50', 'F29', 'F07', 2000000, 'yisgznea@gmail.com', NULL),
-('T164', '402489465669', 'Hồ Thu Trung ', 'F23', 'K20', 'C23', 'F05', 1200000, 'mbhazzvb@gmail.com', 28),
-('T165', '191515911023', 'Trần Tiến Bảo ', 'F01', 'K20', 'B02', 'F02', 2000000, 'gzksylfm@gmail.com', NULL),
-('T166', '026598152104', 'Bùi Phúc Thiên ', 'F06', 'K50', 'D06', 'F06', 800000, 'dcimqhmt@gmail.com', 79),
-('T167', '399136718759', 'Phùng Phúc Thuý ', 'F22', 'K07', 'D22', 'F10', 700000, 'lukibjdg@gmail.com', 14),
-('T168', '987209177834', 'Phùng Thiên Mỹ ', 'F30', 'K07', 'B03', 'F07', 800000, 'fqbyzqkv@gmail.com', 25),
-('T169', '136373776898', 'Phùng Phước Thuý ', 'F07', 'K50', 'E07', 'F09', 800000, 'qrcklhow@gmail.com', 89),
-('T170', '044792511186', 'Phan Tiến Phúc ', 'F27', 'K50', 'D30', 'F07', 1200000, 'cterrmbe@gmail.com', 10),
-('T171', '975935399270', 'Nguyễn Thanh Trọng ', 'F25', 'K50', 'B26', 'F05', 2000000, 'cpxbboyx@gmail.com', NULL),
-('T172', '298667108732', 'Nguyễn Khang Khang ', 'F17', 'K50', 'B18', 'F05', 1500000, 'kuufqyne@gmail.com', NULL),
-('T173', '346355027980', 'Lê Mỹ Ngọc ', 'F01', 'K07', 'A03', 'F06', 1500000, 'qxpriokl@gmail.com', 8),
-('T174', '529997256887', 'Trần Đăng Nhật ', 'F26', 'K50', 'A27', 'F05', 1500000, 'crwhvemx@gmail.com', 98),
-('T175', '426103431455', 'Đặng Ngọc Bảo ', 'F25', 'K20', 'D25', 'F09', 1700000, 'nmquiqhw@gmail.com', NULL),
-('T176', '238597687883', 'Đặng Bảo Văn ', 'F06', 'K50', 'D07', 'F09', 700000, 'titoylqe@gmail.com', 69),
-('T177', '303907823240', 'Phạm Bình Thu ', 'F13', 'K50', 'E14', 'F08', 1200000, 'mffihhnp@gmail.com', 53),
-('T178', '747198037199', 'Nguyễn Phúc Thành ', 'F16', 'K07', 'A17', 'F05', 700000, 'owrxwsvy@gmail.com', NULL),
-('T179', '360503973923', 'Huỳnh Thành Khang ', 'F01', 'K07', 'F02', 'F08', 1500000, 'fybhxnny@gmail.com', 78),
-('T180', '080443726357', 'Trần Mỹ Tiến ', 'F01', 'K50', 'B03', 'F01', 2000000, 'tzkdnjhe@gmail.com', NULL),
-('T181', '343814724683', 'Phùng Khang Trọng ', 'F01', 'K50', 'A02', 'F07', 1500000, 'mzpjqxfi@gmail.com', NULL),
-('T182', '577869223455', 'Phan Phước Ngọc ', 'F03', 'K20', 'A05', 'F08', 1500000, 'nbkmcpvw@gmail.com', NULL),
-('T183', '815874440013', 'Phạm Thuý Bình ', 'F13', 'K07', 'D14', 'F06', 1000000, 'qhhitvcx@gmail.com', 35),
-('T184', '605751635947', 'Đặng Mỹ Mỹ ', 'F09', 'K20', 'A11', 'F09', 2000000, 'ljlkbebt@gmail.com', 55),
-('T185', '326464432543', 'Đặng Bình Tiến ', 'F04', 'K07', 'D04', 'F08', 1000000, 'sxrjhixe@gmail.com', 36),
-('T186', '993448649180', 'Huỳnh Thiên Trọng ', 'F09', 'K50', 'B10', 'F03', 1500000, 'wlnavlbk@gmail.com', NULL),
-('T187', '511752432874', 'Châu Phúc Văn ', 'F22', 'K20', 'B22', 'F08', 1200000, 'hvqrazej@gmail.com', NULL),
-('T188', '190394797628', 'Trần Minh Phúc ', 'F15', 'K07', 'D18', 'F07', 700000, 'evgqsnkf@gmail.com', 76),
-('T189', '478365074351', 'Châu Bình Phúc ', 'F29', 'K20', 'C30', 'F04', 700000, 'alhvponj@gmail.com', 1),
-('T190', '276792005688', 'Hoàng Đăng Trung ', 'F24', 'K07', 'F24', 'F10', 800000, 'wycppihl@gmail.com', 98),
-('T191', '574199112225', 'Bùi Khang Thiên ', 'F22', 'K50', 'A23', 'F03', 800000, 'kcemuyct@gmail.com', 45),
-('T192', '362380383049', 'Nguyễn Trí Trí ', 'F22', 'K50', 'C23', 'F10', 700000, 'zaiwjvle@gmail.com', 73),
-('T193', '865585032334', 'Châu Thuý Nhật ', 'F22', 'K50', 'B23', 'F02', 1200000, 'uwpsifjb@gmail.com', NULL),
-('T194', '850558761351', 'Châu Khang Văn ', 'F26', 'K07', 'C27', 'F09', 1700000, 'lkcltwam@gmail.com', NULL),
-('T195', '965862019222', 'Trần Khang Phúc ', 'F05', 'K20', 'A06', 'F04', 2000000, 'atbyftbu@gmail.com', 6),
-('T196', '050117086357', 'Trần Tuấn Nhật ', 'F01', 'K50', 'D02', 'F07', 700000, 'sqentswd@gmail.com', 35),
-('T197', '403528072980', 'Lê Trung Trung ', 'F17', 'K50', 'A17', 'F07', 1500000, 'uftavilm@gmail.com', 45),
-('T198', '610328817593', 'Huỳnh Mỹ Thuỳ ', 'F10', 'K50', 'D11', 'F06', 1200000, 'lcrlspfa@gmail.com', NULL),
-('T199', '953394257293', 'Phùng Thanh Mỹ ', 'F14', 'K50', 'F14', 'F08', 800000, 'boibkwvu@gmail.com', 42),
-('T200', '535152380628', 'Thạch Trọng Trung ', 'F09', 'K20', 'E09', 'F09', 1700000, 'czwofbqz@gmail.com', NULL);
+    ('FD01', 'Bữa sáng ấm áp', '150000'),
+    ('FD02', 'Mì quảng', '120000'),
+    ('FD03', 'Phở bò', '130000'),
+    ('FD04', 'Bánh mì sandwich', '100000'),
+    ('FD05', 'Gỏi cuốn', '110000'),
+    ('FD06', 'Cơm gà hấp', '140000'),
+    ('FD07', 'Bún riêu cua', '125000'),
+    ('FD08', 'Bánh xèo', '130000'),
+    ('FD09', 'Bánh mì pate', '90000'),
+    ('FD10', 'Bún chả Hà Nội', '135000'),
+	('FD11', 'Nước suối', '10000'),
+    ('FD12', 'Nước ngọt', '15000'),
 
 
-CREATE TABLE `bluestar`.`ticket` (`Ticket_ID` VARCHAR(4) NOT NULL , `CCCD` VARCHAR(12) NOT NULL , `Name` VARCHAR(50) NOT NULL , `Fly_ID` VARCHAR(4) NOT NULL , `Kg_ID` VARCHAR(3) NOT NULL , `Seat_ID` VARCHAR(3) NOT NULL , `Food_ID` VARCHAR(3) NULL DEFAULT NULL , `Ticket_Price` INT(10) NOT NULL , `Mail` VARCHAR(50) NOT NULL , `Dis_ID` INT(3) NULL DEFAULT NULL , PRIMARY KEY (`Ticket_ID`), UNIQUE (`Fly_ID`, `Seat_ID`, `CCCD`,`Name`,`Mail`), UNIQUE (`Fly_ID`, `Seat_ID`)) ENGINE = InnoDB;
-INSERT INTO `ticket` (`Ticket_ID`, `CCCD`, `Name`, `Fly_ID`, `Kg_ID`, `Seat_ID`, `Food_ID`, `Ticket_Price`, `Mail`, `Dis_ID`) VALUES 
-('T001', '923676706826', 'Phan Bảo Thanh ', 'F09', 'K50', 'D09', 'F07', 700000, 'reqpkjcr@gmail.com', 72),
-('T002', '509659544959', 'Bùi Mỹ Thành ', 'F17', 'K07', 'F17', 'F01', 1000000, 'sneujaew@gmail.com', 95),
-('T003', '527636769042', 'Phùng Thành Bình ', 'F20', 'K07', 'F20', 'F09', 2000000, 'pwixydtp@gmail.com', 7),
-('T004', '780579884688', 'Phan Văn Thị ', 'F28', 'K50', 'F28', 'F04', 800000, 'jvmwfudd@gmail.com', NULL),
-('T005', '128717000549', 'Châu Thành Tuấn ', 'F24', 'K07', 'B24', 'F04', 700000, 'afrzbgmf@gmail.com', NULL),
-('T006', '986240306308', 'Hồ Ngọc Tiến ', 'F15', 'K07', 'A15', 'F09', 2000000, 'selrinaj@gmail.com', 83),
-('T007', '769996733916', 'Lê Trung Thu ', 'F11', 'K20', 'E11', 'F03', 1200000, 'pzrpuact@gmail.com', NULL),
-('T008', '666518625995', 'Nguyễn Thuý Trí ', 'F18', 'K07', 'A18', 'F04', 1000000, 'nzycpaeb@gmail.com', NULL),
-('T009', '281997473875', 'Trần Ngọc Thành ', 'F04', 'K20', 'F04', 'F02', 1200000, 'umqsgutn@gmail.com', 64),
-('T010', '840231298539', 'Hồ Tiến Văn ', 'F10', 'K50', 'F10', 'F05', 800000, 'nppqerzc@gmail.com', NULL),
-('T011', '135943326250', 'Hồ Tiến Tiến ', 'F15', 'K07', 'F15', 'F08', 700000, 'obhoelqy@gmail.com', 90),
-('T012', '202492183468', 'Phùng Trọng Ngọc ', 'F27', 'K50', 'E27', 'F02', 1700000, 'bmxvuqmq@gmail.com', NULL),
-('T013', '057696678701', 'Thạch Thuỳ Tuấn ', 'F10', 'K20', 'F11', 'F03', 1200000, 'avoneukh@gmail.com', 8),
-('T014', '154426318154', 'Phan Mỹ Mỹ ', 'F08', 'K50', 'F08', 'F10', 700000, 'hkrgupcf@gmail.com', 27),
-('T015', '653498944350', 'Huỳnh Văn Thành ', 'F15', 'K07', 'D15', 'F08', 800000, 'bzgfoagn@gmail.com', NULL),
-('T016', '277130118940', 'Phạm Thuỳ Trí ', 'F22', 'K20', 'E22', 'F07', 1200000, 'zmplltbg@gmail.com', NULL),
-('T017', '881787145129', 'Lê Mỹ Đăng ', 'F27', 'K20', 'B27', 'F06', 2000000, 'urocxwep@gmail.com', 65),
-('T018', '174106102108', 'Lê Thiên Bình ', 'F15', 'K20', 'E15', 'F06', 1500000, 'veeufuce@gmail.com', 37),
-('T019', '904958839973', 'Thạch Trung Thuỳ ', 'F27', 'K20', 'A27', 'F09', 2000000, 'knzqaqbp@gmail.com', 56),
-('T020', '208542925163', 'Thạch Tiến Tiến ', 'F08', 'K20', 'D08', 'F06', 2000000, 'ezrohsev@gmail.com', 26),
-('T021', '867403042930', 'Võ Đăng Mỹ ', 'F01', 'K07', 'C01', 'F04', 1700000, 'lxsinzkw@gmail.com', 60),
-('T022', '459525084830', 'Hoàng Thanh Tiến ', 'F06', 'K07', 'F06', 'F08', 1700000, 'dpskbokh@gmail.com', 35),
-('T023', '907345516869', 'Huỳnh Trí Khang ', 'F30', 'K20', 'D30', 'F05', 700000, 'uzqowwdi@gmail.com', NULL),
-('T024', '314071500869', 'Nguyễn Mỹ Trung ', 'F06', 'K20', 'C06', 'F05', 700000, 'jmnspipq@gmail.com', 12),
-('T025', '825414550162', 'Phạm Thuý Mỹ ', 'F10', 'K20', 'F12', 'F06', 2000000, 'xczbyhag@gmail.com', 50),
-('T026', '171912269099', 'Võ Ngọc Tiến ', 'F30', 'K07', 'A30', 'F10', 2000000, 'zncpbvkf@gmail.com', 2),
-('T027', '444113310326', 'Lê Thiên Mỹ ', 'F18', 'K50', 'B18', 'F05', 1700000, 'njiyzyxy@gmail.com', 26),
-('T028', '759567832427', 'Võ Khang Khang ', 'F20', 'K50', 'D20', 'F03', 1700000, 'tpumvctw@gmail.com', NULL),
-('T029', '044112052680', 'Huỳnh Tiến Bình ', 'F16', 'K07', 'C16', 'F10', 800000, 'wqivsvll@gmail.com', 2),
-('T030', '203551868838', 'Châu Mỹ Thị ', 'F03', 'K50', 'A03', 'F07', 1700000, 'knmgjmak@gmail.com', NULL),
-('T031', '331974449322', 'Vũ Trí Bình ', 'F05', 'K50', 'E05', 'F04', 2000000, 'fczpzvzc@gmail.com', 10),
-('T032', '557425910583', 'Bùi Trọng Thu ', 'F13', 'K20', 'C13', 'F05', 2000000, 'gvfcpyec@gmail.com', NULL),
-('T033', '423493662131', 'Đặng Khang Mỹ ', 'F14', 'K20', 'A14', 'F04', 1200000, 'zjtsqkgk@gmail.com', 79),
-('T034', '647087038603', 'Hồ Thành Minh ', 'F15', 'K20', 'E16', 'F10', 1000000, 'gphrhidy@gmail.com', NULL),
-('T035', '851131484801', 'Vũ Trung Tiến ', 'F12', 'K20', 'A12', 'F07', 1700000, 'ctwssvhg@gmail.com', 56),
-('T036', '161482422113', 'Đặng Minh Trung ', 'F07', 'K50', 'F07', 'F05', 2000000, 'kdxzzkcc@gmail.com', NULL),
-('T037', '437201000088', 'Phùng Thuỳ Thuý ', 'F22', 'K20', 'A22', 'F06', 2000000, 'tbtkxhdj@gmail.com', 65),
-('T038', '991719754719', 'Nguyễn Minh Huy ', 'F01', 'K20', 'C02', 'F06', 1500000, 'ndixfhtw@gmail.com', NULL),
-('T039', '981479936688', 'Nguyễn Bình Thiên ', 'F21', 'K07', 'B21', 'F07', 2000000, 'dwuqmxad@gmail.com', 95),
-('T040', '304467797859', 'Đặng Thu Trí ', 'F26', 'K50', 'C26', 'F07', 1500000, 'mjlhcjdm@gmail.com', 20),
-('T041', '543299202539', 'Hoàng Trung Phúc ', 'F23', 'K50', 'A23', 'F08', 1700000, 'ubndwqkf@gmail.com', 38),
-('T042', '640205897797', 'Phùng Văn Ngọc ', 'F18', 'K07', 'F18', 'F03', 2000000, 'ekbgmxei@gmail.com', 54),
-('T043', '358400116765', 'Phan Thị Thu ', 'F13', 'K50', 'B13', 'F06', 1000000, 'wbwblydd@gmail.com', NULL),
-('T044', '634143933877', 'Phan Phúc Phúc ', 'F08', 'K07', 'C08', 'F04', 800000, 'smqsjulq@gmail.com', NULL),
-('T045', '640279162765', 'Phùng Huy Bảo ', 'F09', 'K20', 'C09', 'F04', 800000, 'sayaydac@gmail.com', 11),
-('T046', '617968740893', 'Trần Ngọc Khang ', 'F04', 'K50', 'F05', 'F09', 1200000, 'haxujogj@gmail.com', 63),
-('T047', '648221836433', 'Lê Văn Văn ', 'F30', 'K07', 'F30', 'F08', 800000, 'apuqtyiu@gmail.com', 25),
-('T048', '283668925730', 'Vũ Tuấn Thu ', 'F25', 'K50', 'F25', 'F10', 800000, 'hijiuath@gmail.com', NULL),
-('T049', '992622086378', 'Thạch Bình Thuỳ ', 'F01', 'K50', 'E01', 'F09', 800000, 'rzbqkllh@gmail.com', NULL),
-('T050', '153579216535', 'Vũ Huy Thiên ', 'F09', 'K07', 'C10', 'F04', 1500000, 'yamdhlxj@gmail.com', NULL),
-('T051', '704652106542', 'Châu Thu Tuấn ', 'F11', 'K07', 'C11', 'F04', 800000, 'uebolugn@gmail.com', 55),
-('T052', '767687936647', 'Phùng Mỹ Bảo ', 'F27', 'K50', 'D27', 'F06', 800000, 'yblknsaf@gmail.com', 29),
-('T053', '219457258748', 'Hoàng Nhật Minh ', 'F03', 'K50', 'D03', 'F09', 800000, 'sqzjcnpk@gmail.com', NULL),
-('T054', '112166585817', 'Phan Mỹ Văn ', 'F06', 'K07', 'F07', 'F10', 800000, 'ymuiulpx@gmail.com', NULL),
-('T055', '662378286114', 'Phùng Bảo Ngọc ', 'F27', 'K50', 'E28', 'F06', 1700000, 'bnngljqd@gmail.com', NULL),
-('T056', '139580516433', 'Hồ Thuý Trung ', 'F22', 'K07', 'E23', 'F01', 1000000, 'pozattfx@gmail.com', NULL),
-('T057', '975420444520', 'Nguyễn Minh Bảo ', 'F09', 'K07', 'A09', 'F01', 1500000, 'xpfrylqn@gmail.com', 12),
-('T058', '563056002095', 'Võ Bảo Khang ', 'F19', 'K50', 'B19', 'F05', 1500000, 'xhrprjrm@gmail.com', 59),
-('T059', '872041337121', 'Đặng Ngọc Minh ', 'F27', 'K50', 'D28', 'F04', 700000, 'pgdglebc@gmail.com', 14),
-('T060', '014632302023', 'Vũ Thành Trọng ', 'F21', 'K07', 'F21', 'F09', 1000000, 'esbzlbje@gmail.com', NULL),
-('T061', '982874498884', 'Nguyễn Bình Phúc ', 'F24', 'K07', 'D24', 'F05', 1700000, 'gxdwlovc@gmail.com', NULL),
-('T062', '585086790407', 'Trần Trí Văn ', 'F15', 'K50', 'B15', 'F02', 1500000, 'ijojavah@gmail.com', 65),
-('T063', '365827247706', 'Đặng Tuấn Tuấn ', 'F27', 'K50', 'A28', 'F02', 700000, 'snaswcyx@gmail.com', NULL),
-('T064', '859317090172', 'Phùng Nhật Tiến ', 'F18', 'K07', 'A19', 'F06', 1000000, 'xxbfqhkm@gmail.com', 32),
-('T065', '963684857479', 'Bùi Bảo Phước ', 'F16', 'K20', 'B16', 'F07', 2000000, 'omsrpfrk@gmail.com', NULL),
-('T066', '502817173602', 'Võ Thiên Phước ', 'F06', 'K50', 'E06', 'F09', 2000000, 'slccgzyi@gmail.com', NULL),
-('T067', '392089048341', 'Phan Minh Nhật ', 'F05', 'K07', 'F05', 'F09', 800000, 'rfoeplkk@gmail.com', NULL),
-('T068', '646277472635', 'Võ Thu Đăng ', 'F03', 'K07', 'E03', 'F01', 2000000, 'vgwenxiw@gmail.com', NULL),
-('T069', '976471288253', 'Lê Bình Nhật ', 'F30', 'K20', 'B01', 'F05', 800000, 'hmrtzvoj@gmail.com', NULL),
-('T070', '258895057247', 'Trần Thanh Thành ', 'F01', 'K20', 'F01', 'F02', 1700000, 'omwqtdhp@gmail.com', NULL),
-('T071', '784266887060', 'Nguyễn Văn Bình ', 'F30', 'K07', 'E01', 'F02', 700000, 'xpjrbbuw@gmail.com', 77),
-('T072', '471486563824', 'Phan Thanh Thuỳ ', 'F27', 'K20', 'E29', 'F09', 800000, 'tmgskqbb@gmail.com', NULL),
-('T073', '240393841141', 'Phùng Trọng Thu ', 'F07', 'K50', 'B07', 'F03', 1700000, 'uxqtrudf@gmail.com', NULL),
-('T074', '808802512294', 'Hồ Tiến Văn ', 'F13', 'K50', 'E13', 'F05', 1700000, 'mkufvnls@gmail.com', 71),
-('T075', '463740836742', 'Phạm Mỹ Văn ', 'F16', 'K50', 'B17', 'F08', 1700000, 'itfisghr@gmail.com', 2),
-('T076', '393861263998', 'Phạm Thanh Thu ', 'F15', 'K07', 'D16', 'F09', 700000, 'rmrzbbbt@gmail.com', 100),
-('T077', '344803619041', 'Trần Ngọc Trí ', 'F05', 'K20', 'D05', 'F01', 2000000, 'lobxgphy@gmail.com', 12),
-('T078', '661242477502', 'Hồ Thanh Thiên ', 'F06', 'K20', 'E07', 'F04', 1500000, 'pjpmwejk@gmail.com', NULL),
-('T079', '084316670456', 'Đặng Ngọc Khang ', 'F17', 'K50', 'B17', 'F05', 1500000, 'mkeokirj@gmail.com', 40),
-('T080', '709404393041', 'Trần Trung Huy ', 'F17', 'K07', 'E17', 'F07', 2000000, 'tktqjsfh@gmail.com', 57),
-('T081', '034237212637', 'Hồ Bảo Trung ', 'F22', 'K07', 'C22', 'F04', 1000000, 'nlhivocr@gmail.com', 72),
-('T082', '540270301273', 'Trần Ngọc Thiên ', 'F03', 'K50', 'F03', 'F08', 700000, 'hcdakihv@gmail.com', 99),
-('T083', '329581982082', 'Nguyễn Phúc Thiên ', 'F17', 'K50', 'D17', 'F07', 1700000, 'hqbwkwon@gmail.com', 83),
-('T084', '267126659636', 'Vũ Thị Thanh ', 'F30', 'K07', 'B02', 'F01', 800000, 'xdmmoiji@gmail.com', 29),
-('T085', '634202335404', 'Lê Mỹ Mỹ ', 'F10', 'K07', 'D10', 'F03', 1500000, 'mduojued@gmail.com', 90),
-('T086', '261028218938', 'Lê Trọng Trung ', 'F04', 'K50', 'A04', 'F01', 1700000, 'tttgmltg@gmail.com', NULL),
-('T087', '216855873482', 'Phùng Tuấn Thiên ', 'F01', 'K07', 'B01', 'F04', 1500000, 'sbbxyxwu@gmail.com', 50),
-('T088', '312147451835', 'Châu Trung Thị ', 'F09', 'K20', 'B09', 'F03', 1000000, 'pmzxlnno@gmail.com', NULL),
-('T089', '168749998736', 'Phan Tuấn Đăng ', 'F19', 'K07', 'C19', 'F04', 1700000, 'jdtnanta@gmail.com', NULL),
-('T090', '951749156059', 'Trần Bình Trọng ', 'F30', 'K50', 'C30', 'F06', 1000000, 'fheolyux@gmail.com', 87),
-('T091', '085580965460', 'Phùng Phước Đăng ', 'F29', 'K07', 'C29', 'F06', 1200000, 'vtvbvobe@gmail.com', NULL),
-('T092', '996120680471', 'Lê Thị Trung ', 'F08', 'K50', 'F09', 'F09', 1700000, 'ygonnifl@gmail.com', 97),
-('T093', '514649948679', 'Trần Thiên Minh ', 'F09', 'K50', 'A10', 'F04', 700000, 'fjggbxau@gmail.com', 54),
-('T094', '356131398512', 'Bùi Trọng Bình ', 'F08', 'K07', 'C09', 'F08', 1500000, 'acjibxft@gmail.com', NULL),
-('T095', '096669600368', 'Nguyễn Văn Trí ', 'F10', 'K07', 'A10', 'F07', 1500000, 'aehznllv@gmail.com', NULL),
-('T096', '703081751866', 'Hoàng Trung Phước ', 'F15', 'K07', 'A16', 'F10', 1700000, 'khphxsqy@gmail.com', NULL),
-('T097', '269037072826', 'Bùi Trung Bảo ', 'F12', 'K50', 'A13', 'F06', 1200000, 'jpjkrtkh@gmail.com', 18),
-('T098', '538429016143', 'Đặng Thuý Thuỳ ', 'F07', 'K07', 'D07', 'F05', 1200000, 'utxuuszr@gmail.com', NULL),
-('T099', '090248455943', 'Huỳnh Trí Trí ', 'F16', 'K20', 'A16', 'F05', 1200000, 'zjglssgf@gmail.com', NULL),
-('T100', '832813685356', 'Hoàng Minh Đăng ', 'F17', 'K50', 'F18', 'F10', 1200000, 'uwdyybzc@gmail.com', 66),
-('T101', '953782614948', 'Phạm Phước Đăng ', 'F29', 'K50', 'E29', 'F08', 1700000, 'olxszqyx@gmail.com', NULL),
-('T102', '487402815506', 'Lê Tuấn Trí ', 'F08', 'K50', 'A08', 'F07', 1500000, 'iusiivaf@gmail.com', NULL),
-('T103', '111681242101', 'Huỳnh Nhật Huy ', 'F03', 'K20', 'C03', 'F04', 700000, 'amfcjrut@gmail.com', NULL),
-('T104', '129457295188', 'Hoàng Minh Tuấn ', 'F12', 'K07', 'F12', 'F08', 1500000, 'yzzsxvsf@gmail.com', 97),
-('T105', '769977674357', 'Phùng Đăng Bảo ', 'F16', 'K20', 'D16', 'F02', 800000, 'oczoxruy@gmail.com', NULL),
-('T106', '412349515392', 'Bùi Thuỳ Tuấn ', 'F21', 'K20', 'D21', 'F03', 1500000, 'olaboyet@gmail.com', 60),
-('T107', '223047425051', 'Bùi Minh Bảo ', 'F05', 'K07', 'C05', 'F09', 1200000, 'zmgwrscn@gmail.com', 51),
-('T108', '447754066805', 'Đặng Thiên Thành ', 'F10', 'K07', 'F13', 'F10', 1000000, 'ioxsppuo@gmail.com', 55),
-('T109', '585593722725', 'Thạch Nhật Minh ', 'F10', 'K50', 'E10', 'F09', 1500000, 'gdlvclpd@gmail.com', NULL),
-('T110', '039820869155', 'Hồ Mỹ Thị ', 'F27', 'K50', 'D29', 'F03', 1000000, 'xikqadzc@gmail.com', 55),
-('T111', '552349529861', 'Phạm Trí Huy ', 'F09', 'K50', 'F09', 'F09', 1700000, 'xbtsntqs@gmail.com', 39),
-('T112', '708010237673', 'Châu Tiến Minh ', 'F27', 'K50', 'B28', 'F05', 1500000, 'wiopceic@gmail.com', NULL),
-('T113', '339850980791', 'Võ Bình Bảo ', 'F30', 'K20', 'D01', 'F06', 700000, 'wrfnszeh@gmail.com', 55),
-('T114', '053491237279', 'Thạch Nhật Thị ', 'F01', 'K07', 'A01', 'F04', 1200000, 'cpvinczl@gmail.com', NULL),
-('T115', '332689903944', 'Vũ Mỹ Thiên ', 'F20', 'K50', 'F21', 'F05', 700000, 'yhxmxkdz@gmail.com', NULL),
-('T116', '656870453377', 'Trần Phước Thuý ', 'F23', 'K07', 'B23', 'F09', 1000000, 'krksayvd@gmail.com', NULL),
-('T117', '045827579936', 'Phan Huy Thu ', 'F05', 'K07', 'A05', 'F10', 2000000, 'frolazrh@gmail.com', 84),
-('T118', '099300003644', 'Võ Phước Trung ', 'F04', 'K50', 'A05', 'F06', 1500000, 'jupppxco@gmail.com', 47),
-('T119', '432738375198', 'Hoàng Khang Tiến ', 'F03', 'K50', 'C04', 'F06', 700000, 'lmmajjxr@gmail.com', NULL),
-('T120', '224974355789', 'Võ Khang Khang ', 'F10', 'K07', 'C10', 'F06', 1500000, 'ksydhrxi@gmail.com', 85),
-('T121', '249139178433', 'Bùi Thuỳ Thuỳ ', 'F03', 'K20', 'E04', 'F09', 800000, 'oshwofec@gmail.com', NULL),
-('T122', '366491914383', 'Phan Trí Văn ', 'F16', 'K07', 'F16', 'F06', 1200000, 'kdmooxhu@gmail.com', NULL),
-('T123', '464738309708', 'Huỳnh Thuý Phúc ', 'F18', 'K20', 'D18', 'F09', 1200000, 'srpcpqlb@gmail.com', 54),
-('T124', '399982753063', 'Trần Tuấn Huy ', 'F22', 'K50', 'E24', 'F07', 1500000, 'gaflmbwy@gmail.com', NULL),
-('T125', '526949649593', 'Huỳnh Thành Huy ', 'F08', 'K20', 'A09', 'F02', 1700000, 'wqztxdwq@gmail.com', NULL),
-('T126', '860919346852', 'Châu Mỹ Thị ', 'F15', 'K20', 'C15', 'F10', 2000000, 'itqpchrl@gmail.com', NULL),
-('T127', '405915629413', 'Thạch Thành Mỹ ', 'F20', 'K50', 'E20', 'F10', 1700000, 'kicejjvm@gmail.com', NULL),
-('T128', '575170730914', 'Bùi Văn Mỹ ', 'F07', 'K20', 'A07', 'F03', 1700000, 'fpxawfjl@gmail.com', NULL),
-('T129', '828923053775', 'Phạm Đăng Thiên ', 'F07', 'K50', 'B08', 'F08', 800000, 'ntlcfeqq@gmail.com', 16),
-('T130', '982224627009', 'Võ Phước Phúc ', 'F03', 'K07', 'F04', 'F05', 800000, 'wjefymlm@gmail.com', NULL),
-('T131', '748897323491', 'Huỳnh Trọng Bình ', 'F26', 'K20', 'A26', 'F09', 2000000, 'koanczop@gmail.com', NULL),
-('T132', '403809987715', 'Hoàng Minh Khang ', 'F15', 'K07', 'E17', 'F10', 800000, 'rtglzqtb@gmail.com', 69),
-('T133', '754963901268', 'Vũ Huy Thanh ', 'F04', 'K20', 'B04', 'F04', 1700000, 'cvxynmvf@gmail.com', 30),
-('T134', '018114007816', 'Nguyễn Huy Bảo ', 'F05', 'K20', 'F06', 'F08', 1200000, 'dawlzfud@gmail.com', 64),
-('T135', '888307979717', 'Hồ Thuý Tiến ', 'F18', 'K50', 'C18', 'F03', 1700000, 'dsbftlan@gmail.com', NULL),
-('T136', '032045309654', 'Phùng Thu Mỹ ', 'F01', 'K20', 'C03', 'F06', 800000, 'bylqoytj@gmail.com', NULL),
-('T137', '367120486522', 'Nguyễn Nhật Trung ', 'F30', 'K07', 'D02', 'F05', 1700000, 'kckjxgfi@gmail.com', 96),
-('T138', '433112913039', 'Thạch Ngọc Trí ', 'F29', 'K50', 'A29', 'F05', 800000, 'ohoaiual@gmail.com', 9),
-('T139', '363688648429', 'Phùng Thiên Tuấn ', 'F11', 'K07', 'C12', 'F07', 1000000, 'qfrcukcl@gmail.com', 33),
-('T140', '651922071250', 'Trần Thị Thanh ', 'F06', 'K20', 'B06', 'F02', 1500000, 'fuvionkt@gmail.com', NULL),
-('T141', '978433861400', 'Trần Ngọc Trung ', 'F25', 'K07', 'B25', 'F07', 1000000, 'ifiscxqc@gmail.com', 6),
-('T142', '342804258134', 'Đặng Tuấn Thanh ', 'F20', 'K07', 'A20', 'F05', 700000, 'jkhnsvbh@gmail.com', NULL),
-('T143', '765893091778', 'Trần Nhật Văn ', 'F17', 'K07', 'F1', 'F01', 800000, 'eqxfrygi@gmail.com', NULL),
-('T144', '734886854000', 'Phùng Trí Đăng ', 'F08', 'K20', 'C10', 'F01', 1500000, 'rjbvzfhx@gmail.com', NULL),
-('T145', '518690977624', 'Phạm Mỹ Thị ', 'F10', 'K20', 'E11', 'F07', 700000, 'vbgehiet@gmail.com', 94),
-('T146', '545684987035', 'Nguyễn Nhật Văn ', 'F01', 'K50', 'E02', 'F06', 2000000, 'xjrlbxmw@gmail.com', 45),
-('T147', '218911575351', 'Đặng Phúc Trí ', 'F11', 'K07', 'B11', 'F07', 1200000, 'ltecfqex@gmail.com', NULL),
-('T148', '987251047733', 'Châu Thu Thị ', 'F11', 'K50', 'F11', 'F01', 1500000, 'qrdtorer@gmail.com', 59),
-('T149', '048088318422', 'Phùng Thu Văn ', 'F02', 'K50', 'A02', 'F02', 800000, 'qrsegrht@gmail.com', NULL),
-('T150', '425984609602', 'Bùi Đăng Trí ', 'F13', 'K07', 'D13', 'F01', 700000, 'bazxyjuk@gmail.com', NULL),
-('T151', '133657244485', 'Phạm Thuý Đăng ', 'F15', 'K20', 'D17', 'F01', 1200000, 'wbbyirum@gmail.com', NULL),
-('T152', '223023432755', 'Vũ Trung Tiến ', 'F10', 'K07', 'B10', 'F09', 1700000, 'ugpvjnef@gmail.com', 7),
-('T153', '005618712138', 'Phạm Tuấn Thiên ', 'F02', 'K07', 'B02', 'F03', 1200000, 'wwqnietk@gmail.com', 10),
-('T154', '130019890688', 'Võ Mỹ Nhật ', 'F19', 'K20', 'D19', 'F09', 800000, 'ptjjvusc@gmail.com', 39),
-('T155', '791622472379', 'Bùi Thuỳ Phước ', 'F23', 'K07', 'A24', 'F03', 1000000, 'zcoeejey@gmail.com', NULL),
-('T156', '353562706453', 'Huỳnh Bình Nhật ', 'F03', 'K50', 'D04', 'F08', 1200000, 'srrdlvbn@gmail.com', NULL),
-('T157', '645853051253', 'Nguyễn Trí Tuấn ', 'F18', 'K20', 'F19', 'F02', 1500000, 'gdcasbrv@gmail.com', NULL),
-('T158', '080848206001', 'Phạm Phước Ngọc ', 'F30', 'K07', 'D03', 'F09', 1000000, 'ptiokkgu@gmail.com', NULL),
-('T159', '404938155713', 'Hồ Mỹ Trọng ', 'F20', 'K20', 'E21', 'F10', 1500000, 'kebjoejx@gmail.com', 77),
-('T160', '309100758714', 'Nguyễn Phước Khang ', 'F04', 'K07', 'B05', 'F03', 1500000, 'avfhselm@gmail.com', 59),
-('T161', '344786152126', 'Châu Thu Thị ', 'F17', 'K50', 'C17', 'F05', 800000, 'mckhroca@gmail.com', NULL),
-('T162', '331241244962', 'Phan Văn Huy ', 'F03', 'K07', 'A04', 'F03', 1000000, 'jqxvetoq@gmail.com', NULL),
-('T163', '123119448934', 'Phùng Thị Mỹ ', 'F28', 'K50', 'F29', 'F07', 2000000, 'yisgznea@gmail.com', NULL),
-('T164', '402489465669', 'Hồ Thu Trung ', 'F23', 'K20', 'C23', 'F05', 1200000, 'mbhazzvb@gmail.com', 28),
-('T165', '191515911023', 'Trần Tiến Bảo ', 'F01', 'K20', 'B02', 'F02', 2000000, 'gzksylfm@gmail.com', NULL),
-('T166', '026598152104', 'Bùi Phúc Thiên ', 'F06', 'K50', 'D06', 'F06', 800000, 'dcimqhmt@gmail.com', 79),
-('T167', '399136718759', 'Phùng Phúc Thuý ', 'F22', 'K07', 'D22', 'F10', 700000, 'lukibjdg@gmail.com', 14),
-('T168', '987209177834', 'Phùng Thiên Mỹ ', 'F30', 'K07', 'B03', 'F07', 800000, 'fqbyzqkv@gmail.com', 25),
-('T169', '136373776898', 'Phùng Phước Thuý ', 'F07', 'K50', 'E07', 'F09', 800000, 'qrcklhow@gmail.com', 89),
-('T170', '044792511186', 'Phan Tiến Phúc ', 'F27', 'K50', 'D30', 'F07', 1200000, 'cterrmbe@gmail.com', 10),
-('T171', '975935399270', 'Nguyễn Thanh Trọng ', 'F25', 'K50', 'B26', 'F05', 2000000, 'cpxbboyx@gmail.com', NULL),
-('T172', '298667108732', 'Nguyễn Khang Khang ', 'F17', 'K50', 'B18', 'F05', 1500000, 'kuufqyne@gmail.com', NULL),
-('T173', '346355027980', 'Lê Mỹ Ngọc ', 'F01', 'K07', 'A03', 'F06', 1500000, 'qxpriokl@gmail.com', 8),
-('T174', '529997256887', 'Trần Đăng Nhật ', 'F26', 'K50', 'A27', 'F05', 1500000, 'crwhvemx@gmail.com', 98),
-('T175', '426103431455', 'Đặng Ngọc Bảo ', 'F25', 'K20', 'D25', 'F09', 1700000, 'nmquiqhw@gmail.com', NULL),
-('T176', '238597687883', 'Đặng Bảo Văn ', 'F06', 'K50', 'D07', 'F09', 700000, 'titoylqe@gmail.com', 69),
-('T177', '303907823240', 'Phạm Bình Thu ', 'F13', 'K50', 'E14', 'F08', 1200000, 'mffihhnp@gmail.com', 53),
-('T178', '747198037199', 'Nguyễn Phúc Thành ', 'F16', 'K07', 'A17', 'F05', 700000, 'owrxwsvy@gmail.com', NULL),
-('T179', '360503973923', 'Huỳnh Thành Khang ', 'F01', 'K07', 'F02', 'F08', 1500000, 'fybhxnny@gmail.com', 78),
-('T180', '080443726357', 'Trần Mỹ Tiến ', 'F01', 'K50', 'B03', 'F01', 2000000, 'tzkdnjhe@gmail.com', NULL),
-('T181', '343814724683', 'Phùng Khang Trọng ', 'F01', 'K50', 'A02', 'F07', 1500000, 'mzpjqxfi@gmail.com', NULL),
-('T182', '577869223455', 'Phan Phước Ngọc ', 'F03', 'K20', 'A05', 'F08', 1500000, 'nbkmcpvw@gmail.com', NULL),
-('T183', '815874440013', 'Phạm Thuý Bình ', 'F13', 'K07', 'D14', 'F06', 1000000, 'qhhitvcx@gmail.com', 35),
-('T184', '605751635947', 'Đặng Mỹ Mỹ ', 'F09', 'K20', 'A11', 'F09', 2000000, 'ljlkbebt@gmail.com', 55),
-('T185', '326464432543', 'Đặng Bình Tiến ', 'F04', 'K07', 'D04', 'F08', 1000000, 'sxrjhixe@gmail.com', 36),
-('T186', '993448649180', 'Huỳnh Thiên Trọng ', 'F09', 'K50', 'B10', 'F03', 1500000, 'wlnavlbk@gmail.com', NULL),
-('T187', '511752432874', 'Châu Phúc Văn ', 'F22', 'K20', 'B22', 'F08', 1200000, 'hvqrazej@gmail.com', NULL),
-('T188', '190394797628', 'Trần Minh Phúc ', 'F15', 'K07', 'D18', 'F07', 700000, 'evgqsnkf@gmail.com', 76),
-('T189', '478365074351', 'Châu Bình Phúc ', 'F29', 'K20', 'C30', 'F04', 700000, 'alhvponj@gmail.com', 1),
-('T190', '276792005688', 'Hoàng Đăng Trung ', 'F24', 'K07', 'F24', 'F10', 800000, 'wycppihl@gmail.com', 98),
-('T191', '574199112225', 'Bùi Khang Thiên ', 'F22', 'K50', 'A23', 'F03', 800000, 'kcemuyct@gmail.com', 45),
-('T192', '362380383049', 'Nguyễn Trí Trí ', 'F22', 'K50', 'C23', 'F10', 700000, 'zaiwjvle@gmail.com', 73),
-('T193', '865585032334', 'Châu Thuý Nhật ', 'F22', 'K50', 'B23', 'F02', 1200000, 'uwpsifjb@gmail.com', NULL),
-('T194', '850558761351', 'Châu Khang Văn ', 'F26', 'K07', 'C27', 'F09', 1700000, 'lkcltwam@gmail.com', NULL),
-('T195', '965862019222', 'Trần Khang Phúc ', 'F05', 'K20', 'A06', 'F04', 2000000, 'atbyftbu@gmail.com', 6),
-('T196', '050117086357', 'Trần Tuấn Nhật ', 'F01', 'K50', 'D02', 'F07', 700000, 'sqentswd@gmail.com', 35),
-('T197', '403528072980', 'Lê Trung Trung ', 'F17', 'K50', 'A17', 'F07', 1500000, 'uftavilm@gmail.com', 45),
-('T198', '610328817593', 'Huỳnh Mỹ Thuỳ ', 'F10', 'K50', 'D11', 'F06', 1200000, 'lcrlspfa@gmail.com', NULL),
-('T199', '953394257293', 'Phùng Thanh Mỹ ', 'F14', 'K50', 'F14', 'F08', 800000, 'boibkwvu@gmail.com', 42),
-('T200', '535152380628', 'Thạch Trọng Trung ', 'F09', 'K20', 'E09', 'F09', 1700000, 'czwofbqz@gmail.com', NULL);
+CREATE TABLE ACCOUNT 
+(
+	EMAIL NVARCHAR(30) PRIMARY KEY,
+	PASSWORD NVARCHAR(20),
+	NAME NVARCHAR(30),
+)
+
+INSERT INTO ACCOUNT (EMAIL, PASSWORD, NAME)
+SELECT MAIL, '123456', FULLNAME
+FROM CUSTOMER;
 
 
+
+CREATE TABLE CUSTOMER
+(
+	C_ID VARCHAR(3) PRIMARY KEY NOT NULL,
+	NUM_ID VARCHAR(20),
+	FULLNAME VARCHAR(100),
+	POINT INT,
+	MAIL NVARCHAR(30),
+	CONSTRAINT fk_customer FOREIGN KEY (MAIL) REFERENCES ACCOUNT(EMAIL)
+);
+
+
+INSERT INTO CUSTOMER(C_ID, NUM_ID, FULLNAME, POINT, MAIL)
+VALUES
+    ('C01', '001234567890', 'Nguyễn Văn Hải', null, 'nguyenvanhai@gmail.com'),
+    ('C02', '002345678901', 'Trần Thị Linh', null, 'tranthinguyen@gmail.com'),
+    ('C03', '003456789012', 'Lê Văn Đức', null, 'levanduc@gmail.com'),
+    ('C04', '004567890123', 'Phạm Thị Hương', null, 'phamthihuong@gmail.com'),
+    ('C05', '005678901234', 'Hoàng Văn Nam', null, 'hoangvannam@gmail.com'),
+    ('C06', '006789012345', 'Trịnh Thị Thảo', null, 'trinhthithao@gmail.com'),
+    ('C07', '007890123456', 'Nguyễn Thị Mai', null, 'nguyenthimai@gmail.com'),
+    ('C08', '008901234567', 'Lý Văn Minh', null, 'lyvanminh@gmail.com'),
+    ('C09', '009012345678', 'Vũ Thị Phương', null, 'vuthiphuong@gmail.com'),
+    ('C10', '000123456789', 'Ngô Văn Khánh', null, 'ngovankhanh@gmail.com'),
+    ('C11', '001234567890', 'Phan Thị Trang', null, 'phanthitrang@gmail.com'),
+    ('C12', '002345678901', 'Trương Văn Hiền', null, 'truongvanhien@gmail.com'),
+    ('C13', '003456789012', 'Mai Thị Nga', null, 'maithinga@gmail.com'),
+    ('C14', '004567890123', 'Vương Văn Thanh', null, 'vuongvanthanh@gmail.com'),
+    ('C15', '005678901234', 'Đinh Thị Lan', null, 'dinhthilan@gmail.com'),
+    ('C16', '006789012345', 'Lâm Văn Tùng', null, 'lamvantung@gmail.com'),
+    ('C17', '007890123456', 'Võ Thị Hà', null, 'vothiha@gmail.com'),
+    ('C18', '008901234567', 'Đặng Văn Trung', null, 'dangvantrung@gmail.com'),
+    ('C19', '009012345678', 'Hồ Thị Lan', null, 'hothilan@gmail.com'),
+    ('C20', '000123456789', 'Chu Văn Tuấn', null, 'chuvantuan@gmail.com')
+ 
+
+
+
+CREATE TABLE TICKET (
+    T_ID VARCHAR(4) NOT NULL,
+    CCCD VARCHAR(12) NOT NULL,
+    Name VARCHAR(50) NOT NULL,
+    Fly_ID VARCHAR(4) NOT NULL,
+    Kg_ID VARCHAR(3) NOT NULL,
+    Seat_ID VARCHAR(3) NOT NULL,
+    Food_ID VARCHAR(5) NULL,
+    Ticket_Price INT NOT NULL,
+    Mail VARCHAR(50) NOT NULL,
+    Dis_ID NVARCHAR(5)
+    PRIMARY KEY (T_ID),
+    CONSTRAINT UQ_Fly_Seat_CCCD_Name_Mail UNIQUE (Fly_ID, Seat_ID, CCCD, Name, Mail),
+    CONSTRAINT UQ_Fly_Seat UNIQUE (Fly_ID, Seat_ID)
+);
+
+
+INSERT INTO TICKET (T_ID, CCCD, NAME, Fly_ID, Kg_ID, Seat_ID, Food_ID, Ticket_Price, Mail, Dis_ID) VALUES 
+('T001', '001234567890', 'Nguyễn Văn Hải', 'F009', 'K50', 'D09', 'FD07', 700000, 'nguyenvanhai@gmail.com', 'D01'),
+('T002', '002345678901', 'Trần Thị Linh', 'F017', 'K07', 'F17', 'FD01', 1000000, 'tranthinguyen@gmail.com', 'D02'),
+('T003', '003456789012', 'Lê Văn Đức', 'F020', 'K07', 'F20', 'FD09', 2000000, 'levanduc@gmail.com', 'D03'),
+('T004', '004567890123', 'Phạm Thị Hương', 'F028', 'K50', 'F28', 'FD04', 100000, 'phamthihuong@gmail.com', 'D04'),
+('T005', '128717000549', 'Châu Thành Tuấn ', 'F024', 'K07', 'B24', 'FD04', 700000, 'afrzbgmf@gmail.com', 'DO5'),
+('T006', '986240306308', 'Hồ Ngọc Tiến ', 'F015', 'K07', 'A15', 'FD09', 2000000, 'selrinaj@gmail.com', 'DO6'),
+('T007', '005678901234', 'Hoàng Văn Nam ', 'F011', 'K20', 'E11', 'FD03', 1200000, 'hoangvannam@gmail.com', 'DO7'),
+('T008', '006789012345', 'Trịnh Thị Thảo ', 'F018', 'K07', 'A18', 'FD04', 1000000, 'trinhthithao@gmail.com', 'DO8'),
+('T009', '281997473875', 'Trần Ngọc Thành ', 'F004', 'K20', 'F04', 'FD02', 1200000, 'umqsgutn@gmail.com', 'D09'),
+('T010', '840231298539', 'Hồ Tiến Văn ', 'F010', 'K50', 'F10', 'FD05', 800000, 'nppqerzc@gmail.com', 'D10'),
+('T011', '007890123456', 'Nguyễn Thị Mai ', 'F015', 'K07', 'F15', 'FD08', 700000, 'nguyenthimai@gmail.com', 'D11'),
+('T012', '202492183468', 'Phùng Trọng Ngọc ', 'F027', 'K50', 'E27', 'FD02', 1700000, 'bmxvuqmq@gmail.com', 'D12'),
+('T013', '057696678701', 'Thạch Thuỳ Tuấn ', 'F010', 'K20', 'F11', 'FD03', 1200000, 'avoneukh@gmail.com', 'D13'),
+('T014', '008901234567', 'Lý Văn Minh ', 'F008', 'K50', 'F08', 'FD10', 700000, 'lyvanminh@gmail.com', 'D14'),
+('T015', '653498944350', 'Huỳnh Văn Thành ', 'F015', 'K07', 'D15', 'FD08', 800000, 'bzgfoagn@gmail.com', 'D15'),
+('T016', '277130118940', 'Phạm Thuỳ Trí ', 'F022', 'K20', 'E22', 'FD07', 1200000, 'zmplltbg@gmail.com', 'D16'),
+('T017', '881787145129', 'Lê Mỹ Đăng ', 'F027', 'K20', 'B27', 'FD06', 2000000, 'urocxwep@gmail.com', 'D17'),
+('T018', '009012345678', 'Vũ Thị Phương ', 'F015', 'K20', 'E15', 'FD06', 1500000, 'vuthiphuong@gmail.com', 'D18'),
+('T019', '000123456789', 'Ngô Văn Khánh ', 'F027', 'K20', 'A27', 'FD09', 2000000, 'ngovankhanh@gmail.com', 'D19'),
+('T020', '208542925163', 'Thạch Tiến Tiến ', 'F008', 'K20', 'D08', 'FD06', 2000000, 'ezrohsev@gmail.com', 'D20'),
+('T021', '001234567890', 'Phan Thị Trang ', 'F001', 'K07', 'C01', 'FD04', 1700000, 'phanthitrang@gmail.com', 'D01'),
+('T022', '002345678901', 'Trương Văn Hiền ', 'F006', 'K07', 'F06', 'FD08', 1700000, 'truongvanhien@gmail.com', 'D02'),
+('T023', '907345516869', 'Huỳnh Trí Khang ', 'F030', 'K20', 'D30', 'FD05', 700000, 'uzqowwdi@gmail.com', 'D03'),
+('T024', '003456789012', 'Mai Thị Nga ', 'F006', 'K20', 'C06', 'FD05', 700000, 'maithinga@gmail.com', 'D04'),
+('T025', '004567890123', 'Vương Văn Thanh ', 'F010', 'K20', 'F12', 'FD06', 2000000, 'vuongvanthanh@gmail.com', 'D05'),
+('T026', '171912269099', 'Võ Ngọc Tiến ', 'F030', 'K07', 'A30', 'FD10', 2000000, 'zncpbvkf@gmail.com', 'D06'),
+('T027', '444113310326', 'Lê Thiên Mỹ ', 'F018', 'K50', 'B18', 'FD05', 1700000, 'njiyzyxy@gmail.com', 'D07'),
+('T028', '005678901234', 'Đinh Thị Lan ', 'F020', 'K50', 'D20', 'FD03', 1700000, 'dinhthilan@gmail.com', 'D08'),
+('T029', '044112052680', 'Huỳnh Tiến Bình ', 'F016', 'K07', 'C16', 'FD10', 800000, 'wqivsvll@gmail.com', 'D09'),
+('T030', '007890123456', 'Lâm Văn Tùng ', 'F003', 'K50', 'A03', 'FD07', 1700000, 'lamvantung@gmail.com', 'D10'),
+('T031', '006789012345', 'Võ Thị Hà ', 'F005', 'K50', 'E05', 'FD04', 2000000, 'vothiha@gmail.com', 'D11'),
+('T032', '557425910583', 'Bùi Trọng Thu ', 'F013', 'K20', 'C13', 'FD05', 2000000, 'gvfcpyec@gmail.com', 'D12'),
+('T033', '008901234567', 'Đặng Văn Trung ', 'F014', 'K20', 'A14', 'FD04', 1200000, 'dangvantrung@gmail.com', 'D13'),
+('T034', '647087038603', 'Hồ Thành Minh ', 'F015', 'K20', 'E16', 'FD10', 1000000, 'gphrhidy@gmail.com', 'D14'),
+('T035', '009012345678', 'Hồ Thị Lan ', 'F012', 'K20', 'A12', 'FD07', 1700000, 'hothilan@gmail.com', 'D15'),
+('T036', '161482422113', 'Đặng Minh Trung ', 'F007', 'K50', 'F07', 'FD05', 2000000, 'kdxzzkcc@gmail.com', 'D16'),
+('T037', '000123456789', 'Chu Văn Tuấn ', 'F022', 'K20', 'A22', 'FD06', 2000000, 'chuvantuan@gmail.com', 'D17'),
+('T038', '991719754719', 'Nguyễn Minh Huy ', 'F001', 'K20', 'C02', 'FD06', 1500000, 'ndixfhtw@gmail.com', 'D18'),
+('T039', '981479936688', 'Nguyễn Bình Thiên ', 'F021', 'K07', 'B21', 'FD07', 2000000, 'dwuqmxad@gmail.com', 'D20'),
+('T040', '304467797859', 'Đặng Thu Trí ', 'F026', 'K50', 'C26', 'FD07', 1500000, 'mjlhcjdm@gmail.com', 'D19'),
+('T041', '543299202539', 'Hoàng Trung Phúc ', 'F023', 'K50', 'A23', 'FD08', 1700000, 'ubndwqkf@gmail.com', 'D01'),
+('T042', '640205897797', 'Phùng Văn Ngọc ', 'F018', 'K07', 'F18', 'FD03', 2000000, 'ekbgmxei@gmail.com', 'D02'),
+('T043', '358400116765', 'Phan Thị Thu ', 'F013', 'K50', 'B13', 'FD06', 1000000, 'wbwblydd@gmail.com', NULL),
+('T044', '634143933877', 'Phan Phúc Phúc ', 'F008', 'K07', 'C08', 'FD04', 800000, 'smqsjulq@gmail.com', NULL),
+('T045', '640279162765', 'Phùng Huy Bảo ', 'F009', 'K20', 'C09', 'FD04', 800000, 'sayaydac@gmail.com', NULL),
+('T046', '617968740893', 'Trần Ngọc Khang ', 'F004', 'K50', 'F05', 'FD09', 1200000, 'haxujogj@gmail.com', NULL),
+('T047', '648221836433', 'Lê Văn Văn ', 'F030', 'K07', 'F30', 'FD08', 800000, 'apuqtyiu@gmail.com', NULL),
+('T048', '283668925730', 'Vũ Tuấn Thu ', 'F025', 'K50', 'F25', 'FD10', 800000, 'hijiuath@gmail.com', NULL),
+('T049', '992622086378', 'Thạch Bình Thuỳ ', 'F001', 'K50', 'E01', 'FD09', 800000, 'rzbqkllh@gmail.com', NULL),
+('T050', '153579216535', 'Vũ Huy Thiên ', 'F009', 'K07', 'C10', 'FD04', 1500000, 'yamdhlxj@gmail.com', NULL)
+
+
+
+CREATE TABLE LUGGAGE 
+(
+     LUGGAGE_CODE VARCHAR(10) PRIMARY KEY,
+     MASS VARCHAR(5),
+     PRICE  INT
+)
+
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K07','7kg',30000)
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K10','10kg',30000)
+INSERT INTO LUGGAGE  (LUGGAGE_CODE,MASS, PRICE) VALUES('K20','50kg',30000)
+
+---SEAT TABLE
+CREATE TABLE SEAT 
+(
+     SEAT_ID VARCHAR(10) PRIMARY KEY,
+     SEAT_TYPE VARCHAR(20),
+     PRIVILEGE_CODE VARCHAR(2),  
+     FOREIGN KEY (PRIVILEGE_CODE) REFERENCES PRIVILEGE(PRIVILEGE_ID)
+)
 
