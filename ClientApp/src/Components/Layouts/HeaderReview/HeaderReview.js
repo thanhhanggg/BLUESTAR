@@ -9,7 +9,7 @@ export default function HeaderReview() {
 
   return (
     <div className='navbar'>
-        <img src={logo} alt="Logo" />
+        <img className= "logo" src={logo} alt="Logo" />
 
         <ul className='navbar-links'>
             <li><a href='/'>Trang chủ</a></li>
