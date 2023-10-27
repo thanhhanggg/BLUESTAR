@@ -28,7 +28,7 @@ export default function SignUp() {
                         </div>
                         <div className="mb-3 d-flex justify-content-between">
                             <label htmlFor="#">Đã có tài khoản ?</label>
-                            <a href="/dang-nhap">Đăng nhập</a>
+                            <a href="/sign-in">Đăng nhập</a>
                         </div>
                     </form>
                 </div>

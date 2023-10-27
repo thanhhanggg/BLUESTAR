@@ -20,11 +20,11 @@ export default function Login ()
                         <input type="password" className="form-controlLogin" id="inputPassword" placeholder="Password" required />
                     </div>
                     <div className="mb-3">
-                        <button type="submit" className="btn btn-primary btn-block" id="btnLogin">Login now</button>
+                        <button type="submit" className="btn btn-primary btn-block" id="btnLogin">Đăng nhập ngay</button>
                     </div>
                     <div className="mb-3 d-flex justify-content-between">
-                        <a href="#">Forgot password ?</a>
-                        <a href="/dang-ky">Sign up</a>
+                        <a href="#">Quên mật khẩu ?</a>
+                        <a href="/sign-up">Đăng ký</a>
                     </div>
                 </form>
             </div>

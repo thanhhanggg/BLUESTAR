@@ -48,7 +48,15 @@
     border: 1px solid #ccc;
     border-radius: 5px;
 }
-
+#btnLogin{
+    margin-top: 5px;
+    position: relative;
+    left: 50%; /* Đặt vị trí ở giữa theo chiều rộng */
+    transform: translate(-50%, -50%); /* Dịch chuyển form để nằm chính giữa */
+    
+   
+    
+}
  .search {
     margin: 15px auto;
     background: #0F5A90;
