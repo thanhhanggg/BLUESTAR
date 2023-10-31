@@ -23,6 +23,8 @@ import Payment from "./Components/Pages/Payment/Payment";
 import Explore from "./Components/Pages/Explore/explore";
 import Personal from "./Components/Pages/Personal/Personal";
 import Refund from "./Components/Pages/Refund/Refund";
+import KhachHang from "./Components/Pages/Admin/KhachHang/KhachHang";
+import Sidebar from "./Components/Layouts/Sidebar/Sidebar";
 
 const AppRoutes = [
   
@@ -115,6 +117,11 @@ const AppRoutes = [
         path: '/Refund',
         element: Refund,
         layout: MainLayoutLogin
+    },
+    {
+        path: '/KhachHang',
+        element: KhachHang,
+        layout: Sidebar
     },
     
 

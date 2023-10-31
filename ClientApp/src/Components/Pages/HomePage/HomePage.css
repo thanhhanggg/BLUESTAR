@@ -1,0 +1,209 @@
+.homepage__container{
+    background-color: #EFEFEF;
+    width: 1440px;
+    /* width: 100%; */
+    height: auto;
+}
+
+/* Search */
+.homepage__container--search{
+    width: 1055px;
+    height: 256px;
+    border-radius: 54px;
+    background-color: #FBF8F8;
+    margin: 0 auto;
+    margin-top: 5rem;
+}
+.search__container--radio{
+    width: 100%;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: flex-start;
+    gap: 0.5rem;
+    padding: 0.5rem 0 0 5rem;
+}
+.text-color{
+    color: #1F0D0D;
+    font-weight: 400;
+    font-size: 16px;
+
+}
+input[type="radio"]{
+    width: 25px;
+    height: 25px;
+    margin: 0;
+}
+.display-flex{
+    display: flex;
+}
+.search__container--select{
+    width: 1027px;
+    height: 100px;
+    padding: 1.5rem 1rem 0 2rem;
+    gap: 0.5rem;
+}
+.w-410px{
+    width: 410px;
+    height: 80px;
+}
+.w-205px{
+    width: 205px;
+    height: 80px;
+    background-color: #FFF;
+    color: #1F0D0D;
+    font-weight: 400;
+    font-size: 16px;
+}
+.w-150px{
+    width: 150px;
+    height: 80px;
+    background-color: #FFF;
+    color: #1F0D0D;
+    font-weight: 400;
+    font-size: 16px;
+}
+.pt-1rem{
+    padding-top: 1rem;
+}
+.gap-1px{
+    gap: 1px;
+}
+.border-1px{
+    border: 1px solid #cfc5c5;
+    border-radius: 5px;
+}
+.search__container--btn{
+    width: 107px;
+    height:34px;
+    background-color: #0F5A90;
+    border-radius: 54px;
+    border: none;
+    font-weight: 400;
+    font-size: 16px;
+    color: #1F0D0D;
+    cursor: pointer;
+}
+/* Content */
+.homepage__container--content{
+    width: 1055px;
+    height: 500px;
+    margin: 0 auto;
+    margin-top: 3rem;
+}
+.content--title{
+    font-weight: 400;
+    font-size: 28px;
+    color: #000000;
+    float: left;
+    margin: 0;
+    line-height: 32.42px;
+}
+
+.content-wrapper{
+    display: flex;
+    width: 100%;
+    height: 180px;
+    justify-content: space-between;
+}
+.content--item{
+    width: 333px;
+    display: flex;
+    padding-top: 3rem;
+}
+.icon-item{
+    width: 50px;
+    height: 30px;
+    border: 1px solid #cfc5c5;
+    object-fit: cover;
+    border-radius: 10px;
+}
+.content-item--left{
+    flex: 1;
+}
+.content-item--right :nth-child(1){
+    color: #000000;
+    font-weight: 700;
+    font-size: 28px;
+    margin: 0;
+    padding-left: 1rem;
+    text-align: left;
+}
+.content-item--right :nth-child(2){
+    color: #000000;
+    font-weight: 400;
+    font-size: 14px;
+    margin: 0;
+    padding-left: 1rem;
+    text-align: left;
+}
+
+.content--middle{
+    color: #000000;
+    font-weight: 700;
+    font-size: 28px;
+    margin-top: 3rem;
+    letter-spacing: 2px;
+}
+.content__image--dog{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-top: 1rem;
+}
+.content--address{
+    color: #333333;
+    font-weight: 400;
+    font-size: 14px;
+    letter-spacing: 2px;
+    margin-top: 1rem;
+}
+
+/* IMAGE RENDER GRID */
+
+.homepage__container--image{
+    width: 1440px;
+    height: auto;
+    margin: 0 auto;
+    text-align: center;
+}
+.container__image--title{
+    font-weight: 400;
+    font-size: 28px;
+    color: #000000;
+    margin: 5rem 0 0 0;
+    line-height: 32.42px;
+}
+.container__image--img{
+    width: 1440px;
+    height: 742px;
+    margin-top: 2rem;
+}
+
+.grid-container--image {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: repeat(3, 1fr);
+    grid-gap: 10px;
+    margin: 3rem 0 5rem 0;
+    /* Chỗ margin 5rem là margin-bottomm (bên dưới) , t làm cho web dễ nhìn, nếu mà thấy k ổn thì xóa, sợ ảnh hưởng footer C# */
+  }
+  
+  .grid-item--image {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+  .grid-item--image img {
+    width: 353px;
+    height: 507px;
+  }
+  .grid-item--image p{
+    color: #000000;
+    font-size: 28px;
+    font-weight: 400;
+    line-height: 35px;
+  }
