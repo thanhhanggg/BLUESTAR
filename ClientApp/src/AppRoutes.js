@@ -25,6 +25,8 @@ import Personal from "./Components/Pages/Personal/Personal";
 import Refund from "./Components/Pages/Refund/Refund";
 import KhachHang from "./Components/Pages/Admin/KhachHang/KhachHang";
 import Sidebar from "./Components/Layouts/Sidebar/Sidebar";
+import HomePage from "./Components/Pages/HomePage/HomePage";
+import HomeLayout from "./Components/Layouts/HomeLayout/HomeLayout";
 
 const AppRoutes = [
   
@@ -122,6 +124,11 @@ const AppRoutes = [
         path: '/KhachHang',
         element: KhachHang,
         layout: Sidebar
+    },
+    {
+        path: '/home',
+        element: HomePage,
+        layout: HomeLayout
     },
     
 

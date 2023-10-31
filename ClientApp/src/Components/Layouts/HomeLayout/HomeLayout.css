@@ -1,0 +1,12 @@
+.body-main-home
+{
+    height: 3500px;
+    background-color:#EFEFEF;
+    position:relative;
+    width: 100%;
+}
+.Booking-Main-Body {
+    position: absolute;
+    width: 100%;
+    top: 220px;
+}
