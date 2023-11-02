@@ -24,9 +24,24 @@ import Explore from "./Components/Pages/Explore/explore";
 import Personal from "./Components/Pages/Personal/Personal";
 import Refund from "./Components/Pages/Refund/Refund";
 import KhachHang from "./Components/Pages/Admin/KhachHang/KhachHang";
+import Ve from "./Components/Pages/Admin/Ve/Ve";
+import DoanhSo from "./Components/Pages/Admin/DoanhSo/DoanhSo";
+import DoAn from "./Components/Pages/Admin/DoAn/DoAn";
+import HanhLy from "./Components/Pages/Admin/HanhLy/HanhLy";
+import MaGiamGia from "./Components/Pages/Admin/MaGiamGia/MaGiamGia";
+import MayBay from "./Components/Pages/Admin/MayBay/MayBay";
+import SanBay from "./Components/Pages/Admin/SanBay/SanBay";
+import ChuyenBay from "./Components/Pages/Admin/ChuyenBay/ChuyenBay";
+import MatKhau from "./Components/Pages/Admin/MatKhau/MatKhau";
+import NhanVien from "./Components/Pages/Admin/NhanVien/NhanVien";
+import CaNhan from "./Components/Pages/Admin/CaNhan/CaNhan";
 import Sidebar from "./Components/Layouts/Sidebar/Sidebar";
 import HomePage from "./Components/Pages/HomePage/HomePage";
 import HomeLayout from "./Components/Layouts/HomeLayout/HomeLayout";
+import AdminLayout from "./Components/Layouts/AdminLayout/AdminLayout";
+import Hero from "./Components/Layouts/Hero/Hero";
+import HeaderReview from "./Components/Layouts/HeaderReview/HeaderReview";
+
 
 const AppRoutes = [
   
@@ -121,9 +136,64 @@ const AppRoutes = [
         layout: MainLayoutLogin
     },
     {
+        path: '/DoanhSo',
+        element: DoanhSo,
+        layout: Sidebar
+    },
+    {
         path: '/KhachHang',
         element: KhachHang,
         layout: Sidebar
+    },
+    {
+        path: '/Ve',
+        element: Ve,
+        layout: Sidebar
+    },
+    {
+        path: '/ChuyenBay',
+        element: ChuyenBay,
+        layout: Sidebar
+    },
+    {
+        path: '/DoAn',
+        element: DoAn,
+        layout: Sidebar
+    },
+    {
+        path: '/SanBay',
+        element: SanBay,
+        layout: Sidebar
+    },
+    {
+        path: '/HanhLy',
+        element: HanhLy,
+        layout: Sidebar
+    },
+    {
+        path: '/MaGiamGia',
+        element: MaGiamGia,
+        layout: Sidebar
+    },
+    {
+        path: '/MayBay',
+        element: MayBay,
+        layout: Sidebar
+    },
+    {
+        path: '/MatKhau',
+        element: MatKhau,
+        layout: AdminLayout
+    },
+    {
+        path: '/NhanVien',
+        element: NhanVien,
+        layout: AdminLayout
+    },
+    {
+        path: '/CaNhan',
+        element: CaNhan,
+        layout: AdminLayout
     },
     {
         path: '/home',
