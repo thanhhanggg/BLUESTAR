@@ -1,5 +1,6 @@
 import React, { useState } from 'react';
 import './Sidebar.css';
+import logo from '../../../assets/logo2.PNG';
 
 const Sidebar = ({children}) => { 
     return (
@@ -19,7 +20,7 @@ const Sidebar = ({children}) => {
             <li className="list-group-item sidebar-separator-title text-muted d-flex align-items-center menu-collapsed">
               <div className="logo-container">
                 <div className="logo-inner">
-                  <img src="Logo.PNG" alt="Logo" className="logo-img" />
+                  <img src={logo} alt="Logo" className="logo-img" />
                 </div>
                 <span className="Logo-name">Blue Star</span>
               </div>

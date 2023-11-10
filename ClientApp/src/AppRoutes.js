@@ -31,7 +31,7 @@ import HomeLayout from "./Components/Layouts/HomeLayout/HomeLayout";
 const AppRoutes = [
   
   {
-        path: '/',
+        path: '/ticket-search',
         element: SearchPage,
         layout: DefaultLayOut
     },
@@ -126,7 +126,7 @@ const AppRoutes = [
         layout: Sidebar
     },
     {
-        path: '/home',
+        path: '/',
         element: HomePage,
         layout: HomeLayout
     },
