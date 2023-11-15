@@ -103,9 +103,10 @@
   
   .Logo-name {
       margin-left: 10px; /* Khoảng cách giữa logo và chữ */
-      font-weight: bolder;
+      
       color: white;
       font-family: Open sans;
+      font-size: 15px;
   }
   
   @keyframes rotate {

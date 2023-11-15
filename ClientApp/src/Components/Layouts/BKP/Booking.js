@@ -4,6 +4,7 @@ import './Booking.css';
 import Button from '@mui/material/Button';
 import SendIcon from '@mui/icons-material/Send';
 import { useLocation } from 'react-router-dom';
+import { useNavigate } from 'react-router-dom';
 export default function Booking()
 {      
     const [tripType, setTripType] = useState("oneWay"); // Ban đầu chọn "1 chiều"
@@ -11,6 +12,11 @@ export default function Booking()
     const pathname = location.pathname;
     const routeName = pathname.split('/').filter(Boolean)[0];
     console.log(routeName);
+    const navigate = useNavigate();
+
+    const handleClick = () => {
+        navigate('/ticket-search'); // Sử dụng navigate để chuyển trang
+    };
     {/*Function thay đổi checkbox */ }
     const handleTripTypeChange = (event) => {
         setTripType(event.target.value);
@@ -125,7 +131,7 @@ export default function Booking()
                             </div>
                         </div>
                         {/*Search BTN*/}
-                        <div className="button_container">
+                        <div className="button_container" onClick={handleClick}>
                             <Button variant="contained" size="large" startIcon={<SendIcon />} className="custom-button" >
                                 Search
                             </Button>

@@ -1,6 +1,8 @@
 import React from "react";
 import './KhachHang.css';
 
+import 'bootstrap/dist/css/bootstrap.min.css';
+
 const KhachHang = () => {
     return (
         <div className="col-md-10 main">
